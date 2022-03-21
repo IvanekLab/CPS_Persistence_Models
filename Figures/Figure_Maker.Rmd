@@ -1,0 +1,606 @@
+---
+title: "Figure_Maker"
+author: "Cecil W. Barnett-Neefs"
+date: "03/07/2021"
+output: pdf_document
+---
+
+```{r setup}
+library(GGally)
+library(ggplot2)
+library(ggpattern)
+library(ggpubr)
+library(gridExtra)
+library(reshape2)
+
+get_legend<-function(myggplot){
+  tmp <- ggplot_gtable(ggplot_build(myggplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)
+}
+```
+
+```{r Figure 1}
+#Import
+Facility_A_baseline_allwed_prev <- read.csv('Facility_A_Baseline_Prev.csv')
+Facility_A_baseline_allwed_prev$scenario <- as.factor(Facility_A_baseline_allwed_prev$scenario)
+Facility_A_baseline_allwed_prev$water <- factor(Facility_A_baseline_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_baseline_allwed_prev$week <- as.factor(Facility_A_baseline_allwed_prev$week)
+
+Facility_A_baseline_allwed_concs <- read.csv('Facility_A_Baseline_Concs.csv')
+Facility_A_baseline_allwed_concs$area <- as.factor(Facility_A_baseline_allwed_concs$area)
+Facility_A_baseline_allwed_concs$area <- factor(Facility_A_baseline_allwed_concs$area, levels = c('loading', 'cleaning', 'sorting', 'bag packing', 'tray packing', 'reject', 'other'))
+Facility_A_baseline_allwed_concs$scenario <- as.factor(Facility_A_baseline_allwed_concs$scenario)
+Facility_A_baseline_allwed_concs$water <- factor(Facility_A_baseline_allwed_concs$water, levels = c('Wet', 'Dry'))
+Facility_A_baseline_allwed_concs$week <- as.factor(Facility_A_baseline_allwed_concs$week)
+
+Facility_B_baseline_allwed_prev <- read.csv('Facility_B_Baseline_Prev.csv')
+Facility_B_baseline_allwed_prev$scenario <- as.factor(Facility_B_baseline_allwed_prev$scenario)
+Facility_B_baseline_allwed_prev$water <- factor(Facility_B_baseline_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_baseline_allwed_prev$week <- as.factor(Facility_B_baseline_allwed_prev$week)
+
+Facility_B_baseline_allwed_concs <- read.csv('Facility_B_Baseline_Concs.csv')
+Facility_B_baseline_allwed_concs$area <- as.factor(Facility_B_baseline_allwed_concs$area)
+Facility_B_baseline_allwed_concs$area <- factor(Facility_B_baseline_allwed_concs$area, levels = c('loading', 'cleaning', 'sorting', 'tray packing', 'reject', 'other'))
+Facility_B_baseline_allwed_concs$scenario <- as.factor(Facility_B_baseline_allwed_concs$scenario)
+Facility_B_baseline_allwed_concs$water <- factor(Facility_B_baseline_allwed_concs$water, levels = c('Wet', 'Dry'))
+Facility_B_baseline_allwed_concs$week <- as.factor(Facility_B_baseline_allwed_concs$week)
+#Plot
+figure_legend <- ggplot(Facility_A_baseline_allwed_prev, aes(x=water, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(
+    legend.position = "bottom"
+        )
+legend <- get_legend(figure_legend)
+
+figure_a <- ggplot(Facility_A_baseline_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('Week') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  ggtitle("") +
+  scale_fill_manual(name="Area Water Group", values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_b <- ggplot(Facility_B_baseline_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('Week') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_c <- ggplot(Facility_A_baseline_allwed_concs, aes(x=week, y=log10(concentration), fill=water)) + 
+  geom_boxplot() +
+  xlab('Week') +
+  ylab(expression(Log["10"]*" CFU/cm sq.")) +
+  ylim(-10,10) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_d <- ggplot(Facility_B_baseline_allwed_concs, aes(x=week, y=log10(concentration), fill=water)) + 
+  geom_boxplot() +
+  xlab('Week') +
+  ylab(expression(Log["10"]*" CFU/cm sq.")) +
+  ylim(-10,10) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_1 <- ggarrange(
+  figure_a, figure_b, figure_c, figure_d,
+  labels = c('A','B','C','D'),
+  ncol = 2,
+  nrow = 2,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+
+ggsave("Figure_1.tif", plot = figure_1, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
+figure_1
+```
+
+```{r Figure 2}
+#Import
+Facility_A_baseline_fandl_wed_prev <- read.csv('Facility_A_Baseline_1and8_Prev.csv')
+Facility_A_baseline_fandl_wed_prev$area <- factor(Facility_A_baseline_fandl_wed_prev$area, levels = c('loading', 'cleaning', 'sorting', 'bag packing', 'tray packing', 'reject', 'other'))
+Facility_A_baseline_fandl_wed_prev$scenario <- as.factor(Facility_A_baseline_fandl_wed_prev$scenario)
+Facility_A_baseline_fandl_wed_prev$water <- as.factor(Facility_A_baseline_fandl_wed_prev$water)
+Facility_A_baseline_fandl_wed_prev$week <- as.factor(Facility_A_baseline_fandl_wed_prev$week)
+
+Facility_A_baseline_fandl_concs <- read.csv('Facility_B_Baseline_1and8_Concs.csv')
+Facility_A_baseline_fandl_concs$area <- as.factor(Facility_A_baseline_fandl_concs$area)
+Facility_A_baseline_fandl_concs$area <- factor(Facility_A_baseline_fandl_concs$area, levels = c('loading', 'cleaning', 'sorting', 'bag packing', 'tray packing', 'reject', 'other'))
+Facility_A_baseline_fandl_concs$scenario <- as.factor(Facility_A_baseline_fandl_concs$scenario)
+Facility_A_baseline_fandl_concs$water <- as.factor(Facility_A_baseline_fandl_concs$water)
+Facility_A_baseline_fandl_concs$week <- as.factor(Facility_A_baseline_fandl_concs$week)
+
+Facility_B_baseline_fandl_wed_prev <- read.csv('Facility_B_Baseline_1and8_Prev.csv')
+Facility_B_baseline_fandl_wed_prev$area <- factor(Facility_B_baseline_fandl_wed_prev$area, levels = c('loading', 'cleaning', 'sorting', 'tray packing', 'reject', 'other'))
+Facility_B_baseline_fandl_wed_prev$scenario <- as.factor(Facility_B_baseline_fandl_wed_prev$scenario)
+Facility_B_baseline_fandl_wed_prev$water <- as.factor(Facility_B_baseline_fandl_wed_prev$water)
+Facility_B_baseline_fandl_wed_prev$week <- as.factor(Facility_B_baseline_fandl_wed_prev$week)
+
+Facility_B_baseline_fandl_concs <- read.csv('Facility_B_Baseline_1and8_Concs.csv')
+Facility_B_baseline_fandl_concs$area <- as.factor(Facility_B_baseline_fandl_concs$area)
+Facility_B_baseline_fandl_concs$area <- factor(Facility_B_baseline_fandl_concs$area, levels = c('loading', 'cleaning', 'sorting', 'tray packing', 'reject', 'other'))
+Facility_B_baseline_fandl_concs$scenario <- as.factor(Facility_B_baseline_fandl_concs$scenario)
+Facility_B_baseline_fandl_concs$water <- as.factor(Facility_B_baseline_fandl_concs$water)
+Facility_B_baseline_fandl_concs$week <- as.factor(Facility_B_baseline_fandl_concs$week)
+#Plot
+figure_legend <- ggplot(Facility_A_baseline_fandl_wed_prev, aes(x=water, y=prevalence, fill=week)) + 
+  geom_boxplot() +
+  scale_fill_manual(name = "Week", values=c("black","white")) +
+  theme(
+    legend.position = "bottom"
+        )
+legend <- get_legend(figure_legend)
+
+figure_a <- ggplot(Facility_A_baseline_fandl_wed_prev, aes(x=area, y=prevalence, fill=week)) +
+  geom_boxplot() +
+  xlab('Area') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  ggtitle("") +
+  scale_fill_manual(name = "Week",values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_b <- ggplot(Facility_B_baseline_fandl_wed_prev, aes(x=area, y=prevalence, fill=week)) +
+  geom_boxplot() +
+  xlab('Area') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_c <- ggplot(Facility_A_baseline_fandl_concs, aes(x=area, y=log10(concentration), fill=week)) + 
+  geom_boxplot() +
+  xlab('Area') +
+  ylab(expression(Log["10"]*" CFU/cm sq.")) +
+  ylim(-10,10) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_d <- ggplot(Facility_B_baseline_fandl_concs, aes(x=area, y=log10(concentration), fill=week)) + 
+  geom_boxplot() +
+  xlab('Area') +
+  ylab(expression(Log["10"]*" CFU/cm sq.")) +
+  ylim(-10,10) +
+  ggtitle("") +
+  scale_fill_manual(values=c("black","white")) +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 16, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 18, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_2 <- ggarrange(
+  figure_a, figure_b, figure_c, figure_d,
+  labels = c('A','B','C','D'),
+  ncol = 2,
+  nrow = 2,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_2.tif", plot = figure_2, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
+figure_2
+```
+
+```{r Figure 4}
+#Import
+Facility_A_durations_investigation <- read.csv('Facility_A_Durations_Investigation.csv')
+Facility_A_durations_investigation$scenario <- as.factor(Facility_A_durations_investigation$scenario)
+Facility_A_durations_investigation$type <- factor(Facility_A_durations_investigation$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+
+Facility_B_durations_investigation <- read.csv('Facility_B_Durations_Investigation.csv')
+Facility_B_durations_investigation$scenario <- as.factor(Facility_B_durations_investigation$scenario)
+Facility_B_durations_investigation$type <- factor(Facility_B_durations_investigation$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+#Plot
+figure_a <- ggplot() +
+  geom_boxplot_pattern(
+        data = Facility_A_durations_investigation,
+        mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+        fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+        ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.65),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+
+figure_b <- ggplot() +
+  geom_boxplot_pattern(
+        data = Facility_B_durations_investigation,
+        mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+        fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+        ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.65),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+
+figure_4 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 1,
+  nrow = 2,
+  common.legend = FALSE
+)
+ggsave("Figure_4.tif", plot = figure_4, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_4
+```
+
+```{r Figure 5}
+#Import
+Facility_A_frequency_investigation <- read.csv('Facility_A_Frequency_Investigation.csv')
+Facility_A_frequency_investigation$type <- as.factor(Facility_A_frequency_investigation$type)
+Facility_A_frequency_investigation$scenario <- as.factor(Facility_A_frequency_investigation$scenario)
+
+Facility_B_frequency_investigation <- read.csv('Facility_B_Frequency_Investigation.csv')
+Facility_B_frequency_investigation$type <- as.factor(Facility_B_frequency_investigation$type)
+Facility_B_frequency_investigation$scenario <- as.factor(Facility_B_frequency_investigation$scenario)
+#Plot
+figure_a <- ggplot() +
+  geom_tile(
+    data = Facility_A_frequency_investigation,
+    mapping = aes(
+      x = scenario,
+      y = id,
+      fill = value
+    )
+  ) +
+  scale_fill_gradient(name = "Mean Contamination Frequency", low = "white", high = "black") +
+  geom_hline(yintercept = c(0, 60, 86, 113, 126, 135, 151, 224)+0.5, linetype="dashed", size = 0.4) +
+  scale_x_discrete(labels = c("Baseline","No Niches", "Index Case A1", "Index Case A2", "Index Case A3", "Index Case A4", "Index Case A5", "Index Case A6")) +
+  scale_y_continuous(breaks = c(0, 60, 86, 113, 126, 135, 151, 224)+0.5, labels = c("","bag-packing", "cleaning", "loading", "other", "reject", "sorting", "tray-packing")) +
+  xlab(label = "Scenario") +
+  ylab(label = "Agent Functional Group") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(color = "grey20", size = 12, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.text.y = element_text(angle = 45, size = 12),
+    axis.title.x = element_text(color = "grey20", size = 15, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 15, face = "plain"),
+    # panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
+  )
+figure_b <- ggplot() +
+  geom_tile(
+    data = Facility_B_frequency_investigation,
+    mapping = aes(
+      x = scenario,
+      y = id,
+      fill = value
+    )
+  ) +
+  scale_fill_gradient(name = "Mean Contamination Frequency", low = "white", high = "black") +
+  geom_hline(yintercept = c(0, 28, 49, 59, 82, 102, 225)+0.5, linetype="dashed", size = 0.4) +
+  scale_x_discrete(labels = c("Baseline","No Niches", "Index Case B1", "Index Case B2", "Index Case B3", "Index Case B4", "Index Case B5", "Index Case B6")) +
+  scale_y_continuous(breaks = c(0, 28, 49, 59, 82, 102, 225)+0.5, labels = c("", "cleaning", "loading", "other", "reject", "sorting", "tray-packing")) +
+  xlab(label = "Scenario") +
+  ylab(label = "Agent Functional Group") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(color = "grey20", size = 12, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.text.y = element_text(angle = 45, size = 12),
+    axis.title.x = element_text(color = "grey20", size = 15, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 15, face = "plain"),
+    # panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
+  )
+
+figure_5 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = FALSE
+)
+ggsave("Figure_5.tif", plot = figure_5, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_5
+```
+
+```{r Figure 6}
+#Import
+Facility_A_durations_corrective_actions <- read.csv('Facility_A_Durations_Corrective_Actions.csv')
+Facility_A_durations_corrective_actions$scenario <- as.factor(Facility_A_durations_corrective_actions$scenario)
+Facility_A_durations_corrective_actions$type <- factor(Facility_A_durations_corrective_actions$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+
+Facility_B_durations_corrective_actions <- read.csv('Facility_B_Durations_Corrective_Actions.csv')
+Facility_B_durations_corrective_actions$scenario <- as.factor(Facility_B_durations_corrective_actions$scenario)
+Facility_B_durations_corrective_actions$type <- factor(Facility_B_durations_corrective_actions$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+#Plot
+figure_a <- ggplot() +
+  geom_boxplot_pattern(
+    data = Facility_A_durations_corrective_actions,
+    mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+    fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+  ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.75),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+figure_b <- ggplot() +
+  geom_boxplot_pattern(
+    data = Facility_B_durations_corrective_actions,
+    mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+    fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+  ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.75),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+
+figure_6 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 1,
+  nrow = 2,
+  common.legend = FALSE
+)
+ggsave("Figure_6.tif", plot = figure_6, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_6
+```
+
+```{r Figure 7}
+#Import
+Facility_A_frequency_corrective_actions <- read.csv('Facility_A_Frequency_Corrective_Actions.csv')
+Facility_A_frequency_corrective_actions$type <- as.factor(Facility_A_frequency_corrective_actions$type)
+Facility_A_frequency_corrective_actions$scenario <- factor(Facility_A_frequency_corrective_actions$scenario, levels = c("Baseline","EC_04","AI_02","AI_03"))
+
+Facility_B_frequency_corrective_actions <- read.csv('Facility_B_Frequency_Corrective_Actions.csv')
+Facility_B_frequency_corrective_actions$type <- as.factor(Facility_B_frequency_corrective_actions$type)
+Facility_B_frequency_corrective_actions$scenario <- factor(Facility_B_frequency_corrective_actions$scenario, levels = c("Baseline","EC_04","AI_02","AI_03"))
+#Plot
+figure_a <- ggplot() +
+  geom_tile(
+    data = Facility_A_frequency_corrective_actions,
+    mapping = aes(
+      x = scenario,
+      y = id,
+      fill = value
+    )
+  ) +
+  scale_fill_gradient(name = "Mean Contamination Frequency", low = "white", high = "black") +
+  geom_hline(yintercept = c(0, 60, 86, 113, 126, 135, 151, 224)+0.5, linetype="dashed", size = 0.4) +
+  scale_x_discrete(labels = c("Baseline","Corrective Action 4", "Corrective Action 5", "Corrective Action 6")) +
+  scale_y_continuous(breaks = c(0, 60, 86, 113, 126, 135, 151, 224)+0.5, labels = c("","bag-packing", "cleaning", "loading", "other", "reject", "sorting", "tray-packing")) +
+  xlab(label = "Scenario") +
+  ylab(label = "Agent Functional Group") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(color = "grey20", size = 12, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.text.y = element_text(angle = 45, size = 12),
+    axis.title.x = element_text(color = "grey20", size = 15, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 15, face = "plain"),
+    # panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
+  )
+figure_b <- ggplot() +
+  geom_tile(
+    data = Facility_B_frequency_corrective_actions,
+    mapping = aes(
+      x = scenario,
+      y = id,
+      fill = value
+    )
+  ) +
+  scale_fill_gradient(name = "Mean Contamination Frequency", low = "white", high = "black") +
+  geom_hline(yintercept = c(0, 28, 49, 59, 82, 102, 225)+0.5, linetype="dashed", size = 0.4) +
+  scale_x_discrete(labels = c("Baseline","Corrective Action 4", "Corrective Action 5", "Corrective Action 6")) +
+  scale_y_continuous(breaks = c(0, 28, 49, 59, 82, 102, 225)+0.5, labels = c("", "cleaning", "loading", "other", "reject", "sorting", "tray-packing")) +
+  xlab(label = "Scenario") +
+  ylab(label = "Agent Functional Group") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(color = "grey20", size = 12, angle = 45, hjust = 1, vjust = 1, face = "plain"),
+    axis.text.y = element_text(angle = 45, size = 12),
+    axis.title.x = element_text(color = "grey20", size = 15, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 15, face = "plain"),
+    # panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
+  )
+
+figure_7 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = FALSE
+)
+ggsave("Figure_7.tif", plot = figure_7, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_7
+```
+
+```{r Figure 8}
+#Import
+Facility_A_data_matrix_melted <- read.csv('Facility_A_wk8_Sensitivity_Matrix.csv')
+Facility_B_data_matrix_melted <- read.csv('Facility_B_wk8_Sensitivity_Matrix.csv')
+#Plot
+figure_a <- ggplot(Facility_A_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
+  geom_bar(stat = "identity") +
+  ggtitle('') +
+  xlab('') +
+  ylab('') +
+  ylim(-0.5,1.0) +
+  coord_flip() +
+  geom_hline(yintercept = 0) +
+  theme_bw() +
+  scale_x_discrete(
+    labels = c(
+      expression(tau[33]),
+      expression(alpha),
+      expression("R"["d"]),
+      expression(tau[11]),
+      expression("P"["z"]),
+      expression("P"[11]),
+      expression("N"["R"])
+    )
+  )
+figure_b <- ggplot(Facility_B_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
+  geom_bar(stat = "identity") +
+  ggtitle('') +
+  xlab('') +
+  ylab('') +
+  ylim(-0.5,1.0) +
+  coord_flip() +
+  geom_hline(yintercept = 0) +
+  theme_bw() +
+  scale_x_discrete(
+    labels = c(
+      expression(tau[33]),
+      expression("P"[13]),
+      expression("P"["Z"]),
+      expression("N"["r"]),
+      expression("P"[31]),
+      expression(tau[11]),
+      expression(alpha),
+      expression("R"["d"]),
+      expression("P"[11]),
+      expression("N"["R"])
+    )
+  )
+
+figure_8 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 1,
+  nrow = 2,
+  common.legend = FALSE
+)
+ggsave("Figure_8.tif", plot = figure_8, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_8
+```
