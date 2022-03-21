@@ -604,3 +604,360 @@ figure_8 <- ggarrange(
 ggsave("Figure_8.tif", plot = figure_8, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
 figure_8
 ```
+
+```{r Figure S1}
+#Import
+Facility_A_crate_prev_75pc_allwed_prev <- read.csv('Facility_A_EC_01_Prev.csv')
+Facility_A_crate_prev_75pc_allwed_prev$scenario <- as.factor(Facility_A_crate_prev_75pc_allwed_prev$scenario)
+Facility_A_crate_prev_75pc_allwed_prev$water <- factor(Facility_A_crate_prev_75pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_crate_prev_75pc_allwed_prev$week <- as.factor(Facility_A_crate_prev_75pc_allwed_prev$week)
+
+Facility_B_crate_prev_75pc_allwed_prev <- read.csv('Facility_B_EC_01_Prev.csv')
+Facility_B_crate_prev_75pc_allwed_prev$scenario <- as.factor(Facility_B_crate_prev_75pc_allwed_prev$scenario)
+Facility_B_crate_prev_75pc_allwed_prev$water <- factor(Facility_B_crate_prev_75pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_crate_prev_75pc_allwed_prev$week <- as.factor(Facility_B_crate_prev_75pc_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_crate_prev_75pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_crate_prev_75pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S1 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S1.tif", plot = figure_S1, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S1
+```
+
+```{r Figure S2}
+#Import
+Facility_A_crate_prev_50pc_allwed_prev <- read.csv('Facility_A_EC_02_Prev.csv')
+Facility_A_crate_prev_50pc_allwed_prev$scenario <- as.factor(Facility_A_crate_prev_50pc_allwed_prev$scenario)
+Facility_A_crate_prev_50pc_allwed_prev$water <- factor(Facility_A_crate_prev_50pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_crate_prev_50pc_allwed_prev$week <- as.factor(Facility_A_crate_prev_50pc_allwed_prev$week)
+
+Facility_B_crate_prev_50pc_allwed_prev <- read.csv('Facility_B_EC_02_Prev.csv')
+Facility_B_crate_prev_50pc_allwed_prev$scenario <- as.factor(Facility_B_crate_prev_50pc_allwed_prev$scenario)
+Facility_B_crate_prev_50pc_allwed_prev$water <- factor(Facility_B_crate_prev_50pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_crate_prev_50pc_allwed_prev$week <- as.factor(Facility_B_crate_prev_50pc_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_crate_prev_50pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_crate_prev_50pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S2 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S2.tif", plot = figure_S2, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S2
+```
+
+```{r Figure S3}
+#Import
+Facility_A_crate_prev_25pc_allwed_prev <- read.csv('Facility_A_EC_03_Prev.csv')
+Facility_A_crate_prev_25pc_allwed_prev$scenario <- as.factor(Facility_A_crate_prev_25pc_allwed_prev$scenario)
+Facility_A_crate_prev_25pc_allwed_prev$water <- factor(Facility_A_crate_prev_25pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_crate_prev_25pc_allwed_prev$week <- as.factor(Facility_A_crate_prev_25pc_allwed_prev$week)
+
+Facility_B_crate_prev_25pc_allwed_prev <- read.csv('Facility_B_EC_03_Prev.csv')
+Facility_B_crate_prev_25pc_allwed_prev$scenario <- as.factor(Facility_B_crate_prev_25pc_allwed_prev$scenario)
+Facility_B_crate_prev_25pc_allwed_prev$water <- factor(Facility_B_crate_prev_25pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_crate_prev_25pc_allwed_prev$week <- as.factor(Facility_B_crate_prev_25pc_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_crate_prev_25pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_crate_prev_25pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S3 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S3.tif", plot = figure_S3, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S3
+```
+
+```{r Figure S4}
+#Import
+Facility_A_crate_prev_0pc_allwed_prev <- read.csv('Facility_A_EC_04_Prev.csv')
+Facility_A_crate_prev_0pc_allwed_prev$scenario <- as.factor(Facility_A_crate_prev_0pc_allwed_prev$scenario)
+Facility_A_crate_prev_0pc_allwed_prev$water <- factor(Facility_A_crate_prev_0pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_crate_prev_0pc_allwed_prev$week <- as.factor(Facility_A_crate_prev_0pc_allwed_prev$week)
+
+Facility_B_crate_prev_0pc_allwed_prev <- read.csv('Facility_B_EC_04_Prev.csv')
+Facility_B_crate_prev_0pc_allwed_prev$scenario <- as.factor(Facility_B_crate_prev_0pc_allwed_prev$scenario)
+Facility_B_crate_prev_0pc_allwed_prev$water <- factor(Facility_B_crate_prev_0pc_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_crate_prev_0pc_allwed_prev$week <- as.factor(Facility_B_crate_prev_0pc_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_crate_prev_0pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_crate_prev_0pc_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S4 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S4.tif", plot = figure_S4, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S4
+```
+
+```{r Figure S5}
+#Import
+Facility_A_prob_intervention_allwed_prev <- read.csv('Facility_A_AI_02_Prev.csv')
+Facility_A_prob_intervention_allwed_prev$scenario <- as.factor(Facility_A_prob_intervention_allwed_prev$scenario)
+Facility_A_prob_intervention_allwed_prev$water <- factor(Facility_A_prob_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_prob_intervention_allwed_prev$week <- as.factor(Facility_A_prob_intervention_allwed_prev$week)
+
+Facility_B_prob_intervention_allwed_prev <- read.csv('Facility_B_AI_02_Prev.csv')
+Facility_B_prob_intervention_allwed_prev$scenario <- as.factor(Facility_B_prob_intervention_allwed_prev$scenario)
+Facility_B_prob_intervention_allwed_prev$water <- factor(Facility_B_prob_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_prob_intervention_allwed_prev$week <- as.factor(Facility_B_prob_intervention_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_prob_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_prob_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S5 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S5.tif", plot = figure_S5, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S5
+```
+
+```{r Figure S6}
+#Import
+Facility_A_partial_prob_intervention_allwed_prev <- read.csv('Facility_A_AI_03_Prev.csv')
+Facility_A_partial_prob_intervention_allwed_prev$scenario <- as.factor(Facility_A_partial_prob_intervention_allwed_prev$scenario)
+Facility_A_partial_prob_intervention_allwed_prev$water <- factor(Facility_A_partial_prob_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_partial_prob_intervention_allwed_prev$week <- as.factor(Facility_A_partial_prob_intervention_allwed_prev$week)
+
+Facility_B_partial_prob_intervention_allwed_prev <- read.csv('Facility_B_AI_03_Prev.csv')
+Facility_B_partial_prob_intervention_allwed_prev$scenario <- as.factor(Facility_B_partial_prob_intervention_allwed_prev$scenario)
+Facility_B_partial_prob_intervention_allwed_prev$water <- factor(Facility_B_partial_prob_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_partial_prob_intervention_allwed_prev$week <- as.factor(Facility_B_partial_prob_intervention_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_partial_prob_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_partial_prob_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S6 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S6.tif", plot = figure_S6, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S6
+```
+
+```{r Figure S7}
+#Import
+Facility_A_connection_intervention_allwed_prev <- read.csv('Facility_A_AI_04_Prev.csv')
+Facility_A_connection_intervention_allwed_prev$scenario <- as.factor(Facility_A_connection_intervention_allwed_prev$scenario)
+Facility_A_connection_intervention_allwed_prev$water <- factor(Facility_A_connection_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_A_connection_intervention_allwed_prev$week <- as.factor(Facility_A_connection_intervention_allwed_prev$week)
+
+Facility_B_connection_intervention_allwed_prev <- read.csv('Facility_B_AI_04_Prev.csv')
+Facility_B_connection_intervention_allwed_prev$scenario <- as.factor(Facility_B_connection_intervention_allwed_prev$scenario)
+Facility_B_connection_intervention_allwed_prev$water <- factor(Facility_B_connection_intervention_allwed_prev$water, levels = c('Wet', 'Dry'))
+Facility_B_connection_intervention_allwed_prev$week <- as.factor(Facility_B_connection_intervention_allwed_prev$week)
+#Plot
+figure_a <- ggplot(Facility_A_connection_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(name = "Area Water Group", values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+figure_b <- ggplot(Facility_B_connection_intervention_allwed_prev, aes(x=week, y=prevalence, fill=water)) + 
+  geom_boxplot() +
+  xlab('') +
+  ylab('Prevalence %') +
+  ylim(0,100) +
+  scale_fill_manual(values=c("black","white")) +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 11, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+    axis.title.x = element_text(color = "grey20", size = 20, angle = 0, hjust = .5, vjust = 0, face = "plain"),
+    axis.title.y = element_text(color = "grey20", size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain")
+  )
+
+figure_S7 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 2,
+  nrow = 1,
+  common.legend = TRUE,
+  legend = "bottom"
+)
+ggsave("Figure_S7.tif", plot = figure_S7, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S7
+```
