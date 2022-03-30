@@ -46421,21 +46421,21 @@ aux_data_baseline_durations_list <- Facility_B_durations_baseline
 aux_data_baseline_durations_list$scenario <- as.factor("Baseline")
 aux_data_baseline_durations_list$type <- as.factor("All")
 
-aux_data_baseline_transient_durations_list <- as.data.frame(transient_durations_list_baseline)
-aux_data_baseline_transient_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_baseline_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_baseline_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline)
-aux_data_baseline_persistent_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_baseline_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_baseline_excess_durations_list <- as.data.frame(excess_durations_list_baseline)
-aux_data_baseline_excess_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_baseline_excess_durations_list) <- c("duration", "scenario","type")
-
+# aux_data_baseline_transient_durations_list <- as.data.frame(transient_durations_list_baseline)
+# aux_data_baseline_transient_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_baseline_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_baseline_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline)
+# aux_data_baseline_persistent_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_baseline_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_baseline_excess_durations_list <- as.data.frame(excess_durations_list_baseline)
+# aux_data_baseline_excess_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_baseline_excess_durations_list) <- c("duration", "scenario","type")
+# 
 # mine.heatmap <- ggplot() +
 #   geom_tile(
 #     data = aux_data_baseline_durations_all,
@@ -46487,7 +46487,7 @@ colnames(aux_data_baseline_excess_durations_list) <- c("duration", "scenario","t
 #     panel.grid.minor = element_line(size = 0, colour = "white")
 #   )
 # mine.heatmap
-
+# 
 # mine.heatmap <- ggplot() +
 #   geom_tile(
 #     data = aux_data_baseline_freq_count,
@@ -46873,20 +46873,20 @@ aux_data_no_niches_durations_list <- Facility_B_durations_no_niches
 aux_data_no_niches_durations_list$scenario <- as.factor("XI_01")
 aux_data_no_niches_durations_list$type <- as.factor("All")
 
-aux_data_no_niches_transient_durations_list <- as.data.frame(transient_durations_list_no_niches)
-aux_data_no_niches_transient_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_no_niches_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_no_niches_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches)
-aux_data_no_niches_persistent_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_no_niches_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_no_niches_excess_durations_list <- as.data.frame(excess_durations_list_no_niches)
-aux_data_no_niches_excess_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_no_niches_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_no_niches_transient_durations_list <- as.data.frame(transient_durations_list_no_niches)
+# aux_data_no_niches_transient_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_no_niches_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_no_niches_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches)
+# aux_data_no_niches_persistent_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_no_niches_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_no_niches_excess_durations_list <- as.data.frame(excess_durations_list_no_niches)
+# aux_data_no_niches_excess_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_no_niches_excess_durations_list) <- c("duration", "scenario","type")
 
 aux_data_no_niches_series_durations_all <- rbind(
   aux_data_baseline_durations_all,
@@ -47247,20 +47247,20 @@ aux_data_highest_undirected_durations_list <- Facility_B_durations_highest_undir
 aux_data_highest_undirected_durations_list$scenario <- as.factor("XI_02U1")
 aux_data_highest_undirected_durations_list$type <- as.factor("All")
 
-aux_data_highest_undirected_transient_durations_list <- as.data.frame(transient_durations_list_highest_undirected)
-aux_data_highest_undirected_transient_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
-aux_data_highest_undirected_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_highest_undirected_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_highest_undirected_persistent_durations_list <- as.data.frame(persistent_durations_list_highest_undirected)
-aux_data_highest_undirected_persistent_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
-aux_data_highest_undirected_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_highest_undirected_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_highest_undirected_excess_durations_list <- as.data.frame(excess_durations_list_highest_undirected)
-aux_data_highest_undirected_excess_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
-aux_data_highest_undirected_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_highest_undirected_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_highest_undirected_transient_durations_list <- as.data.frame(transient_durations_list_highest_undirected)
+# aux_data_highest_undirected_transient_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
+# aux_data_highest_undirected_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_highest_undirected_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_highest_undirected_persistent_durations_list <- as.data.frame(persistent_durations_list_highest_undirected)
+# aux_data_highest_undirected_persistent_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
+# aux_data_highest_undirected_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_highest_undirected_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_highest_undirected_excess_durations_list <- as.data.frame(excess_durations_list_highest_undirected)
+# aux_data_highest_undirected_excess_durations_list$scenario <- as.factor("High Undirected (XI_02U1)")
+# aux_data_highest_undirected_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_highest_undirected_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_medium_undirected$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -47455,20 +47455,20 @@ aux_data_medium_undirected_durations_list <- Facility_B_durations_medium_undirec
 aux_data_medium_undirected_durations_list$scenario <- as.factor("XI_02U2")
 aux_data_medium_undirected_durations_list$type <- as.factor("All")
 
-aux_data_medium_undirected_transient_durations_list <- as.data.frame(transient_durations_list_medium_undirected)
-aux_data_medium_undirected_transient_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
-aux_data_medium_undirected_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_medium_undirected_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_medium_undirected_persistent_durations_list <- as.data.frame(persistent_durations_list_medium_undirected)
-aux_data_medium_undirected_persistent_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
-aux_data_medium_undirected_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_medium_undirected_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_medium_undirected_excess_durations_list <- as.data.frame(excess_durations_list_medium_undirected)
-aux_data_medium_undirected_excess_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
-aux_data_medium_undirected_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_medium_undirected_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_medium_undirected_transient_durations_list <- as.data.frame(transient_durations_list_medium_undirected)
+# aux_data_medium_undirected_transient_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
+# aux_data_medium_undirected_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_medium_undirected_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_medium_undirected_persistent_durations_list <- as.data.frame(persistent_durations_list_medium_undirected)
+# aux_data_medium_undirected_persistent_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
+# aux_data_medium_undirected_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_medium_undirected_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_medium_undirected_excess_durations_list <- as.data.frame(excess_durations_list_medium_undirected)
+# aux_data_medium_undirected_excess_durations_list$scenario <- as.factor("Medium Undirected (XI_02U2)")
+# aux_data_medium_undirected_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_medium_undirected_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_highest_outgoing$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -47663,20 +47663,20 @@ aux_data_highest_outgoing_durations_list <- Facility_B_durations_highest_outgoin
 aux_data_highest_outgoing_durations_list$scenario <- as.factor("XI_02O1")
 aux_data_highest_outgoing_durations_list$type <- as.factor("All")
 
-aux_data_highest_outgoing_transient_durations_list <- as.data.frame(transient_durations_list_highest_outgoing)
-aux_data_highest_outgoing_transient_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
-aux_data_highest_outgoing_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_highest_outgoing_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_highest_outgoing_persistent_durations_list <- as.data.frame(persistent_durations_list_highest_outgoing)
-aux_data_highest_outgoing_persistent_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
-aux_data_highest_outgoing_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_highest_outgoing_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_highest_outgoing_excess_durations_list <- as.data.frame(excess_durations_list_highest_outgoing)
-aux_data_highest_outgoing_excess_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
-aux_data_highest_outgoing_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_highest_outgoing_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_highest_outgoing_transient_durations_list <- as.data.frame(transient_durations_list_highest_outgoing)
+# aux_data_highest_outgoing_transient_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
+# aux_data_highest_outgoing_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_highest_outgoing_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_highest_outgoing_persistent_durations_list <- as.data.frame(persistent_durations_list_highest_outgoing)
+# aux_data_highest_outgoing_persistent_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
+# aux_data_highest_outgoing_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_highest_outgoing_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_highest_outgoing_excess_durations_list <- as.data.frame(excess_durations_list_highest_outgoing)
+# aux_data_highest_outgoing_excess_durations_list$scenario <- as.factor("High Outgoing (XI_02O2)")
+# aux_data_highest_outgoing_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_highest_outgoing_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_medium_outgoing$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -47871,20 +47871,20 @@ aux_data_medium_outgoing_durations_list <- Facility_B_durations_medium_outgoing
 aux_data_medium_outgoing_durations_list$scenario <- as.factor("XI_02O2")
 aux_data_medium_outgoing_durations_list$type <- as.factor("All")
 
-aux_data_medium_outgoing_transient_durations_list <- as.data.frame(transient_durations_list_medium_outgoing)
-aux_data_medium_outgoing_transient_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
-aux_data_medium_outgoing_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_medium_outgoing_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_medium_outgoing_persistent_durations_list <- as.data.frame(persistent_durations_list_medium_outgoing)
-aux_data_medium_outgoing_persistent_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
-aux_data_medium_outgoing_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_medium_outgoing_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_medium_outgoing_excess_durations_list <- as.data.frame(excess_durations_list_medium_outgoing)
-aux_data_medium_outgoing_excess_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
-aux_data_medium_outgoing_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_medium_outgoing_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_medium_outgoing_transient_durations_list <- as.data.frame(transient_durations_list_medium_outgoing)
+# aux_data_medium_outgoing_transient_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
+# aux_data_medium_outgoing_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_medium_outgoing_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_medium_outgoing_persistent_durations_list <- as.data.frame(persistent_durations_list_medium_outgoing)
+# aux_data_medium_outgoing_persistent_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
+# aux_data_medium_outgoing_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_medium_outgoing_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_medium_outgoing_excess_durations_list <- as.data.frame(excess_durations_list_medium_outgoing)
+# aux_data_medium_outgoing_excess_durations_list$scenario <- as.factor("Medium Outgoing (XI_02O2)")
+# aux_data_medium_outgoing_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_medium_outgoing_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_low_connections$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -48079,20 +48079,20 @@ aux_data_low_connections_durations_list <- Facility_B_durations_low_connections
 aux_data_low_connections_durations_list$scenario <- as.factor("XI_02L")
 aux_data_low_connections_durations_list$type <- as.factor("All")
 
-aux_data_low_connections_transient_durations_list <- as.data.frame(transient_durations_list_low_connections)
-aux_data_low_connections_transient_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
-aux_data_low_connections_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_low_connections_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_low_connections_persistent_durations_list <- as.data.frame(persistent_durations_list_low_connections)
-aux_data_low_connections_persistent_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
-aux_data_low_connections_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_low_connections_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_low_connections_excess_durations_list <- as.data.frame(excess_durations_list_low_connections)
-aux_data_low_connections_excess_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
-aux_data_low_connections_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_low_connections_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_low_connections_transient_durations_list <- as.data.frame(transient_durations_list_low_connections)
+# aux_data_low_connections_transient_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
+# aux_data_low_connections_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_low_connections_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_low_connections_persistent_durations_list <- as.data.frame(persistent_durations_list_low_connections)
+# aux_data_low_connections_persistent_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
+# aux_data_low_connections_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_low_connections_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_low_connections_excess_durations_list <- as.data.frame(excess_durations_list_low_connections)
+# aux_data_low_connections_excess_durations_list$scenario <- as.factor("Low Outgoing & Undirected (XI_02L)")
+# aux_data_low_connections_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_low_connections_excess_durations_list) <- c("duration", "scenario","type")
 
 aux_data_precontamination_series_durations_all <- rbind(
   aux_data_baseline_durations_all,
@@ -48487,20 +48487,20 @@ aux_data_crate_prev_75pc_durations_list <- Facility_B_durations_crate_prev_75pc
 aux_data_crate_prev_75pc_durations_list$scenario <- as.factor("EC_01")
 aux_data_crate_prev_75pc_durations_list$type <- as.factor("All")
 
-aux_data_crate_prev_75pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_75pc)
-aux_data_crate_prev_75pc_transient_durations_list$scenario <- as.factor("EC_01")
-aux_data_crate_prev_75pc_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_crate_prev_75pc_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_75pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_75pc)
-aux_data_crate_prev_75pc_persistent_durations_list$scenario <- as.factor("EC_01")
-aux_data_crate_prev_75pc_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_crate_prev_75pc_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_75pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_75pc)
-aux_data_crate_prev_75pc_excess_durations_list$scenario <- as.factor("EC_01")
-aux_data_crate_prev_75pc_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_crate_prev_75pc_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_crate_prev_75pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_75pc)
+# aux_data_crate_prev_75pc_transient_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_75pc_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_75pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_75pc)
+# aux_data_crate_prev_75pc_persistent_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_75pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_75pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_75pc)
+# aux_data_crate_prev_75pc_excess_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_75pc_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_crate_prev_50pc$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -48695,20 +48695,20 @@ aux_data_crate_prev_50pc_durations_list <- Facility_B_durations_crate_prev_50pc
 aux_data_crate_prev_50pc_durations_list$scenario <- as.factor("EC_02")
 aux_data_crate_prev_50pc_durations_list$type <- as.factor("All")
 
-aux_data_crate_prev_50pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_50pc)
-aux_data_crate_prev_50pc_transient_durations_list$scenario <- as.factor("EC_02")
-aux_data_crate_prev_50pc_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_crate_prev_50pc_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_50pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_50pc)
-aux_data_crate_prev_50pc_persistent_durations_list$scenario <- as.factor("EC_02")
-aux_data_crate_prev_50pc_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_crate_prev_50pc_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_50pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_50pc)
-aux_data_crate_prev_50pc_excess_durations_list$scenario <- as.factor("EC_02")
-aux_data_crate_prev_50pc_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_crate_prev_50pc_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_crate_prev_50pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_50pc)
+# aux_data_crate_prev_50pc_transient_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_50pc_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_50pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_50pc)
+# aux_data_crate_prev_50pc_persistent_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_50pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_50pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_50pc)
+# aux_data_crate_prev_50pc_excess_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_50pc_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_crate_prev_25pc$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -48903,20 +48903,20 @@ aux_data_crate_prev_25pc_durations_list <- Facility_B_durations_crate_prev_25pc
 aux_data_crate_prev_25pc_durations_list$scenario <- as.factor("EC_03")
 aux_data_crate_prev_25pc_durations_list$type <- as.factor("All")
 
-aux_data_crate_prev_25pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_25pc)
-aux_data_crate_prev_25pc_transient_durations_list$scenario <- as.factor("EC_03")
-aux_data_crate_prev_25pc_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_crate_prev_25pc_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_25pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_25pc)
-aux_data_crate_prev_25pc_persistent_durations_list$scenario <- as.factor("EC_03")
-aux_data_crate_prev_25pc_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_crate_prev_25pc_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_25pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_25pc)
-aux_data_crate_prev_25pc_excess_durations_list$scenario <- as.factor("EC_03")
-aux_data_crate_prev_25pc_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_crate_prev_25pc_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_crate_prev_25pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_25pc)
+# aux_data_crate_prev_25pc_transient_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_25pc_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_25pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_25pc)
+# aux_data_crate_prev_25pc_persistent_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_25pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_25pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_25pc)
+# aux_data_crate_prev_25pc_excess_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_25pc_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_crate_prev_0pc$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -49111,20 +49111,20 @@ aux_data_crate_prev_0pc_durations_list <- Facility_B_durations_crate_prev_0pc
 aux_data_crate_prev_0pc_durations_list$scenario <- as.factor("EC_04")
 aux_data_crate_prev_0pc_durations_list$type <- as.factor("All")
 
-aux_data_crate_prev_0pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_0pc)
-aux_data_crate_prev_0pc_transient_durations_list$scenario <- as.factor("EC_04")
-aux_data_crate_prev_0pc_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_crate_prev_0pc_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_0pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_0pc)
-aux_data_crate_prev_0pc_persistent_durations_list$scenario <- as.factor("EC_04")
-aux_data_crate_prev_0pc_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_crate_prev_0pc_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_crate_prev_0pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_0pc)
-aux_data_crate_prev_0pc_excess_durations_list$scenario <- as.factor("EC_04")
-aux_data_crate_prev_0pc_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_crate_prev_0pc_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_crate_prev_0pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_0pc)
+# aux_data_crate_prev_0pc_transient_durations_list$scenario <- as.factor("EC_04")
+# aux_data_crate_prev_0pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_0pc_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_0pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_0pc)
+# aux_data_crate_prev_0pc_persistent_durations_list$scenario <- as.factor("EC_04")
+# aux_data_crate_prev_0pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_0pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_crate_prev_0pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_0pc)
+# aux_data_crate_prev_0pc_excess_durations_list$scenario <- as.factor("EC_04")
+# aux_data_crate_prev_0pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_0pc_excess_durations_list) <- c("duration", "scenario","type")
 
 aux_data_crate_prev_series_durations_all <- rbind(
   aux_data_baseline_durations_all,
@@ -49574,20 +49574,20 @@ aux_data_prob_intervention_durations_list <- Facility_B_durations_prob_intervent
 aux_data_prob_intervention_durations_list$scenario <- as.factor("AI_02")
 aux_data_prob_intervention_durations_list$type <- as.factor("All")
 
-aux_data_prob_intervention_transient_durations_list <- as.data.frame(transient_durations_list_prob_intervention)
-aux_data_prob_intervention_transient_durations_list$scenario <- as.factor("AI_02")
-aux_data_prob_intervention_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_prob_intervention_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_prob_intervention_persistent_durations_list <- as.data.frame(persistent_durations_list_prob_intervention)
-aux_data_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_02")
-aux_data_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_prob_intervention_excess_durations_list <- as.data.frame(excess_durations_list_prob_intervention)
-aux_data_prob_intervention_excess_durations_list$scenario <- as.factor("AI_02")
-aux_data_prob_intervention_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_prob_intervention_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_prob_intervention_transient_durations_list <- as.data.frame(transient_durations_list_prob_intervention)
+# aux_data_prob_intervention_transient_durations_list$scenario <- as.factor("AI_02")
+# aux_data_prob_intervention_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_prob_intervention_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_prob_intervention_persistent_durations_list <- as.data.frame(persistent_durations_list_prob_intervention)
+# aux_data_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_02")
+# aux_data_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_prob_intervention_excess_durations_list <- as.data.frame(excess_durations_list_prob_intervention)
+# aux_data_prob_intervention_excess_durations_list$scenario <- as.factor("AI_02")
+# aux_data_prob_intervention_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_prob_intervention_excess_durations_list) <- c("duration", "scenario","type")
 
 agent_list_areas <- as.vector(agents_list_partial_prob_intervention$area)
 agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
@@ -49782,20 +49782,20 @@ aux_data_partial_prob_intervention_durations_list <- Facility_B_durations_partia
 aux_data_partial_prob_intervention_durations_list$scenario <- as.factor("AI_03")
 aux_data_partial_prob_intervention_durations_list$type <- as.factor("All")
 
-aux_data_partial_prob_intervention_transient_durations_list <- as.data.frame(transient_durations_list_partial_prob_intervention)
-aux_data_partial_prob_intervention_transient_durations_list$scenario <- as.factor("AI_03")
-aux_data_partial_prob_intervention_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_partial_prob_intervention_transient_durations_list) <- c("duration", "scenario","type")
-
-aux_data_partial_prob_intervention_persistent_durations_list <- as.data.frame(persistent_durations_list_partial_prob_intervention)
-aux_data_partial_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_03")
-aux_data_partial_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_partial_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
-
-aux_data_partial_prob_intervention_excess_durations_list <- as.data.frame(excess_durations_list_partial_prob_intervention)
-aux_data_partial_prob_intervention_excess_durations_list$scenario <- as.factor("AI_03")
-aux_data_partial_prob_intervention_excess_durations_list$type <- as.factor("Remainder")
-colnames(aux_data_partial_prob_intervention_excess_durations_list) <- c("duration", "scenario","type")
+# aux_data_partial_prob_intervention_transient_durations_list <- as.data.frame(transient_durations_list_partial_prob_intervention)
+# aux_data_partial_prob_intervention_transient_durations_list$scenario <- as.factor("AI_03")
+# aux_data_partial_prob_intervention_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_partial_prob_intervention_transient_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_partial_prob_intervention_persistent_durations_list <- as.data.frame(persistent_durations_list_partial_prob_intervention)
+# aux_data_partial_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_03")
+# aux_data_partial_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_partial_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# aux_data_partial_prob_intervention_excess_durations_list <- as.data.frame(excess_durations_list_partial_prob_intervention)
+# aux_data_partial_prob_intervention_excess_durations_list$scenario <- as.factor("AI_03")
+# aux_data_partial_prob_intervention_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_partial_prob_intervention_excess_durations_list) <- c("duration", "scenario","type")
 
 aux_data_prob_intervention_series_durations_all <- rbind(
   aux_data_baseline_durations_all,
@@ -50168,14 +50168,14 @@ aux_data_baseline_durations_list <- Facility_B_durations_baseline
 aux_data_baseline_durations_list$scenario <- as.factor("Baseline")
 aux_data_baseline_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_baseline)==0) {
-  aux_data_baseline_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_baseline_transient_durations_list <- as.data.frame(transient_durations_list_baseline)
-}
-aux_data_baseline_transient_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_baseline_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_baseline)==0) {
+#   aux_data_baseline_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_baseline_transient_durations_list <- as.data.frame(transient_durations_list_baseline)
+# }
+# aux_data_baseline_transient_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_baseline_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_baseline$duration)==0) {
   aux_data_baseline_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -50207,15 +50207,15 @@ aux_data_baseline_uncleanable_transient_durations_list$type <- as.factor("Transi
 colnames(aux_data_baseline_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_baseline_uncleanable_transient_durations_list <- subset(aux_data_baseline_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_baseline)==0) {
-  aux_data_baseline_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_baseline_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline) 
-}
-aux_data_baseline_persistent_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_baseline_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_baseline)==0) {
+#   aux_data_baseline_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_baseline_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline) 
+# }
+# aux_data_baseline_persistent_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_baseline_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_baseline$duration)==0) {
 #   aux_data_baseline_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -50448,14 +50448,14 @@ aux_data_baseline_10min_durations_list <- Facility_B_durations_baseline
 aux_data_baseline_10min_durations_list$scenario <- as.factor("Baseline")
 aux_data_baseline_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_baseline_10min)==0) {
-  aux_data_baseline_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_baseline_10min_transient_durations_list <- as.data.frame(transient_durations_list_baseline_10min) 
-}
-aux_data_baseline_10min_transient_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_baseline_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_baseline_10min)==0) {
+#   aux_data_baseline_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_baseline_10min_transient_durations_list <- as.data.frame(transient_durations_list_baseline_10min) 
+# }
+# aux_data_baseline_10min_transient_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_baseline_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_baseline_10min$duration)==0) {
   aux_data_baseline_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -50487,15 +50487,15 @@ aux_data_baseline_10min_uncleanable_transient_durations_list$type <- as.factor("
 colnames(aux_data_baseline_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_baseline_10min_uncleanable_transient_durations_list <- subset(aux_data_baseline_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_baseline_10min)==0) {
-  aux_data_baseline_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_baseline_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline_10min) 
-}
-aux_data_baseline_10min_persistent_durations_list$scenario <- as.factor("Baseline")
-aux_data_baseline_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_baseline_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_baseline_10min)==0) {
+#   aux_data_baseline_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_baseline_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_baseline_10min) 
+# }
+# aux_data_baseline_10min_persistent_durations_list$scenario <- as.factor("Baseline")
+# aux_data_baseline_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_baseline_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_baseline_10min)==0) {
 #   aux_data_baseline_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -50729,14 +50729,14 @@ aux_data_no_niches_durations_list <- Facility_B_durations_no_niches
 aux_data_no_niches_durations_list$scenario <- as.factor("XI_01")
 aux_data_no_niches_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_no_niches)==0) {
-  aux_data_no_niches_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_no_niches_transient_durations_list <- as.data.frame(transient_durations_list_no_niches)
-}
-aux_data_no_niches_transient_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_no_niches_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_no_niches)==0) {
+#   aux_data_no_niches_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_no_niches_transient_durations_list <- as.data.frame(transient_durations_list_no_niches)
+# }
+# aux_data_no_niches_transient_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_no_niches_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_no_niches$duration)==0) {
   aux_data_no_niches_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -50768,15 +50768,15 @@ aux_data_no_niches_uncleanable_transient_durations_list$type <- as.factor("Trans
 colnames(aux_data_no_niches_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_no_niches_uncleanable_transient_durations_list <- subset(aux_data_no_niches_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_no_niches)==0) {
-  aux_data_no_niches_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_no_niches_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches) 
-}
-aux_data_no_niches_persistent_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_no_niches_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_no_niches)==0) {
+#   aux_data_no_niches_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_no_niches_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches) 
+# }
+# aux_data_no_niches_persistent_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_no_niches_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_no_niches$duration)==0) {
 #   aux_data_no_niches_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -51009,14 +51009,14 @@ aux_data_no_niches_10min_durations_list <- Facility_B_durations_no_niches
 aux_data_no_niches_10min_durations_list$scenario <- as.factor("XI_01")
 aux_data_no_niches_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_no_niches_10min)==0) {
-  aux_data_no_niches_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_no_niches_10min_transient_durations_list <- as.data.frame(transient_durations_list_no_niches_10min) 
-}
-aux_data_no_niches_10min_transient_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_no_niches_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_no_niches_10min)==0) {
+#   aux_data_no_niches_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_no_niches_10min_transient_durations_list <- as.data.frame(transient_durations_list_no_niches_10min) 
+# }
+# aux_data_no_niches_10min_transient_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_no_niches_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_no_niches_10min$duration)==0) {
   aux_data_no_niches_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -51048,15 +51048,15 @@ aux_data_no_niches_10min_uncleanable_transient_durations_list$type <- as.factor(
 colnames(aux_data_no_niches_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_no_niches_10min_uncleanable_transient_durations_list <- subset(aux_data_no_niches_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_no_niches_10min)==0) {
-  aux_data_no_niches_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_no_niches_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches_10min) 
-}
-aux_data_no_niches_10min_persistent_durations_list$scenario <- as.factor("XI_01")
-aux_data_no_niches_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_no_niches_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_no_niches_10min)==0) {
+#   aux_data_no_niches_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_no_niches_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_no_niches_10min) 
+# }
+# aux_data_no_niches_10min_persistent_durations_list$scenario <- as.factor("XI_01")
+# aux_data_no_niches_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_no_niches_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_no_niches_10min)==0) {
 #   aux_data_no_niches_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -51290,14 +51290,14 @@ aux_data_index_1_durations_list <- Facility_B_durations_index_1
 aux_data_index_1_durations_list$scenario <- as.factor("XI_02A1")
 aux_data_index_1_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_1)==0) {
-  aux_data_index_1_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_1_transient_durations_list <- as.data.frame(transient_durations_list_index_1)
-}
-aux_data_index_1_transient_durations_list$scenario <- as.factor("XI_02A1")
-aux_data_index_1_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_1_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_1)==0) {
+#   aux_data_index_1_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_1_transient_durations_list <- as.data.frame(transient_durations_list_index_1)
+# }
+# aux_data_index_1_transient_durations_list$scenario <- as.factor("XI_02A1")
+# aux_data_index_1_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_1_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_1$duration)==0) {
   aux_data_index_1_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -51329,15 +51329,15 @@ aux_data_index_1_uncleanable_transient_durations_list$type <- as.factor("Transie
 colnames(aux_data_index_1_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_1_uncleanable_transient_durations_list <- subset(aux_data_index_1_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_1)==0) {
-  aux_data_index_1_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_1_persistent_durations_list <- as.data.frame(persistent_durations_list_index_1) 
-}
-aux_data_index_1_persistent_durations_list$scenario <- as.factor("XI_02A1")
-aux_data_index_1_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_1_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_1)==0) {
+#   aux_data_index_1_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_1_persistent_durations_list <- as.data.frame(persistent_durations_list_index_1) 
+# }
+# aux_data_index_1_persistent_durations_list$scenario <- as.factor("XI_02A1")
+# aux_data_index_1_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_1_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_index_1$duration)==0) {
 #   aux_data_index_1_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -51570,14 +51570,14 @@ aux_data_index_1_10min_durations_list <- Facility_B_durations_index_1
 aux_data_index_1_10min_durations_list$scenario <- as.factor("XI_02A1")
 aux_data_index_1_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_1_10min)==0) {
-  aux_data_index_1_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_1_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_1_10min) 
-}
-aux_data_index_1_10min_transient_durations_list$scenario <- as.factor("XI_02A1")
-aux_data_index_1_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_1_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_1_10min)==0) {
+#   aux_data_index_1_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_1_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_1_10min) 
+# }
+# aux_data_index_1_10min_transient_durations_list$scenario <- as.factor("XI_02A1")
+# aux_data_index_1_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_1_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_1_10min$duration)==0) {
   aux_data_index_1_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -51609,15 +51609,15 @@ aux_data_index_1_10min_uncleanable_transient_durations_list$type <- as.factor("T
 colnames(aux_data_index_1_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_1_10min_uncleanable_transient_durations_list <- subset(aux_data_index_1_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_1_10min)==0) {
-  aux_data_index_1_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_1_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_1_10min) 
-}
-aux_data_index_1_10min_persistent_durations_list$scenario <- as.factor("XI_02A1")
-aux_data_index_1_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_1_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_1_10min)==0) {
+#   aux_data_index_1_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_1_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_1_10min) 
+# }
+# aux_data_index_1_10min_persistent_durations_list$scenario <- as.factor("XI_02A1")
+# aux_data_index_1_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_1_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_index_1_10min)==0) {
 #   aux_data_index_1_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -51851,14 +51851,14 @@ aux_data_index_2_durations_list <- Facility_B_durations_index_2
 aux_data_index_2_durations_list$scenario <- as.factor("XI_02A2")
 aux_data_index_2_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_2)==0) {
-  aux_data_index_2_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_2_transient_durations_list <- as.data.frame(transient_durations_list_index_2)
-}
-aux_data_index_2_transient_durations_list$scenario <- as.factor("XI_02A2")
-aux_data_index_2_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_2_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_2)==0) {
+#   aux_data_index_2_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_2_transient_durations_list <- as.data.frame(transient_durations_list_index_2)
+# }
+# aux_data_index_2_transient_durations_list$scenario <- as.factor("XI_02A2")
+# aux_data_index_2_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_2_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_2$duration)==0) {
   aux_data_index_2_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -51890,15 +51890,15 @@ aux_data_index_2_uncleanable_transient_durations_list$type <- as.factor("Transie
 colnames(aux_data_index_2_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_2_uncleanable_transient_durations_list <- subset(aux_data_index_2_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_2)==0) {
-  aux_data_index_2_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_2_persistent_durations_list <- as.data.frame(persistent_durations_list_index_2) 
-}
-aux_data_index_2_persistent_durations_list$scenario <- as.factor("XI_02A2")
-aux_data_index_2_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_2_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_2)==0) {
+#   aux_data_index_2_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_2_persistent_durations_list <- as.data.frame(persistent_durations_list_index_2) 
+# }
+# aux_data_index_2_persistent_durations_list$scenario <- as.factor("XI_02A2")
+# aux_data_index_2_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_2_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_index_2$duration)==0) {
 #   aux_data_index_2_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -52131,14 +52131,14 @@ aux_data_index_2_10min_durations_list <- Facility_B_durations_index_2
 aux_data_index_2_10min_durations_list$scenario <- as.factor("XI_02A2")
 aux_data_index_2_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_2_10min)==0) {
-  aux_data_index_2_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_2_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_2_10min) 
-}
-aux_data_index_2_10min_transient_durations_list$scenario <- as.factor("XI_02A2")
-aux_data_index_2_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_2_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_2_10min)==0) {
+#   aux_data_index_2_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_2_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_2_10min) 
+# }
+# aux_data_index_2_10min_transient_durations_list$scenario <- as.factor("XI_02A2")
+# aux_data_index_2_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_2_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_2_10min$duration)==0) {
   aux_data_index_2_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -52170,15 +52170,15 @@ aux_data_index_2_10min_uncleanable_transient_durations_list$type <- as.factor("T
 colnames(aux_data_index_2_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_2_10min_uncleanable_transient_durations_list <- subset(aux_data_index_2_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_2_10min)==0) {
-  aux_data_index_2_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_2_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_2_10min) 
-}
-aux_data_index_2_10min_persistent_durations_list$scenario <- as.factor("XI_02A2")
-aux_data_index_2_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_2_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_2_10min)==0) {
+#   aux_data_index_2_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_2_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_2_10min) 
+# }
+# aux_data_index_2_10min_persistent_durations_list$scenario <- as.factor("XI_02A2")
+# aux_data_index_2_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_2_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_index_2_10min)==0) {
 #   aux_data_index_2_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -52412,14 +52412,14 @@ aux_data_index_3_durations_list <- Facility_B_durations_index_3
 aux_data_index_3_durations_list$scenario <- as.factor("XI_02A3")
 aux_data_index_3_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_3)==0) {
-  aux_data_index_3_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_3_transient_durations_list <- as.data.frame(transient_durations_list_index_3)
-}
-aux_data_index_3_transient_durations_list$scenario <- as.factor("XI_02A3")
-aux_data_index_3_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_3_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_3)==0) {
+#   aux_data_index_3_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_3_transient_durations_list <- as.data.frame(transient_durations_list_index_3)
+# }
+# aux_data_index_3_transient_durations_list$scenario <- as.factor("XI_02A3")
+# aux_data_index_3_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_3_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_3$duration)==0) {
   aux_data_index_3_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -52451,15 +52451,15 @@ aux_data_index_3_uncleanable_transient_durations_list$type <- as.factor("Transie
 colnames(aux_data_index_3_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_3_uncleanable_transient_durations_list <- subset(aux_data_index_3_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_3)==0) {
-  aux_data_index_3_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_3_persistent_durations_list <- as.data.frame(persistent_durations_list_index_3) 
-}
-aux_data_index_3_persistent_durations_list$scenario <- as.factor("XI_02A3")
-aux_data_index_3_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_3_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_3)==0) {
+#   aux_data_index_3_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_3_persistent_durations_list <- as.data.frame(persistent_durations_list_index_3) 
+# }
+# aux_data_index_3_persistent_durations_list$scenario <- as.factor("XI_02A3")
+# aux_data_index_3_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_3_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_index_3$duration)==0) {
 #   aux_data_index_3_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -52692,14 +52692,14 @@ aux_data_index_3_10min_durations_list <- Facility_B_durations_index_3
 aux_data_index_3_10min_durations_list$scenario <- as.factor("XI_02A3")
 aux_data_index_3_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_3_10min)==0) {
-  aux_data_index_3_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_3_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_3_10min) 
-}
-aux_data_index_3_10min_transient_durations_list$scenario <- as.factor("XI_02A3")
-aux_data_index_3_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_3_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_3_10min)==0) {
+#   aux_data_index_3_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_3_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_3_10min) 
+# }
+# aux_data_index_3_10min_transient_durations_list$scenario <- as.factor("XI_02A3")
+# aux_data_index_3_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_3_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_3_10min$duration)==0) {
   aux_data_index_3_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -52731,15 +52731,15 @@ aux_data_index_3_10min_uncleanable_transient_durations_list$type <- as.factor("T
 colnames(aux_data_index_3_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_3_10min_uncleanable_transient_durations_list <- subset(aux_data_index_3_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_3_10min)==0) {
-  aux_data_index_3_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_3_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_3_10min) 
-}
-aux_data_index_3_10min_persistent_durations_list$scenario <- as.factor("XI_02A3")
-aux_data_index_3_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_3_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_3_10min)==0) {
+#   aux_data_index_3_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_3_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_3_10min) 
+# }
+# aux_data_index_3_10min_persistent_durations_list$scenario <- as.factor("XI_02A3")
+# aux_data_index_3_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_3_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_index_3_10min)==0) {
 #   aux_data_index_3_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -52973,14 +52973,14 @@ aux_data_index_4_durations_list <- Facility_B_durations_index_4
 aux_data_index_4_durations_list$scenario <- as.factor("XI_02A4")
 aux_data_index_4_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_4)==0) {
-  aux_data_index_4_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_4_transient_durations_list <- as.data.frame(transient_durations_list_index_4)
-}
-aux_data_index_4_transient_durations_list$scenario <- as.factor("XI_02A4")
-aux_data_index_4_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_4_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_4)==0) {
+#   aux_data_index_4_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_4_transient_durations_list <- as.data.frame(transient_durations_list_index_4)
+# }
+# aux_data_index_4_transient_durations_list$scenario <- as.factor("XI_02A4")
+# aux_data_index_4_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_4_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_4$duration)==0) {
   aux_data_index_4_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -53012,15 +53012,15 @@ aux_data_index_4_uncleanable_transient_durations_list$type <- as.factor("Transie
 colnames(aux_data_index_4_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_4_uncleanable_transient_durations_list <- subset(aux_data_index_4_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_4)==0) {
-  aux_data_index_4_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_4_persistent_durations_list <- as.data.frame(persistent_durations_list_index_4) 
-}
-aux_data_index_4_persistent_durations_list$scenario <- as.factor("XI_02A4")
-aux_data_index_4_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_4_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_4)==0) {
+#   aux_data_index_4_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_4_persistent_durations_list <- as.data.frame(persistent_durations_list_index_4) 
+# }
+# aux_data_index_4_persistent_durations_list$scenario <- as.factor("XI_02A4")
+# aux_data_index_4_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_4_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_index_4$duration)==0) {
 #   aux_data_index_4_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -53253,14 +53253,14 @@ aux_data_index_4_10min_durations_list <- Facility_B_durations_index_4
 aux_data_index_4_10min_durations_list$scenario <- as.factor("XI_02A4")
 aux_data_index_4_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_4_10min)==0) {
-  aux_data_index_4_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_4_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_4_10min) 
-}
-aux_data_index_4_10min_transient_durations_list$scenario <- as.factor("XI_02A4")
-aux_data_index_4_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_4_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_4_10min)==0) {
+#   aux_data_index_4_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_4_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_4_10min) 
+# }
+# aux_data_index_4_10min_transient_durations_list$scenario <- as.factor("XI_02A4")
+# aux_data_index_4_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_4_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_4_10min$duration)==0) {
   aux_data_index_4_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -53292,15 +53292,15 @@ aux_data_index_4_10min_uncleanable_transient_durations_list$type <- as.factor("T
 colnames(aux_data_index_4_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_4_10min_uncleanable_transient_durations_list <- subset(aux_data_index_4_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_4_10min)==0) {
-  aux_data_index_4_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_4_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_4_10min) 
-}
-aux_data_index_4_10min_persistent_durations_list$scenario <- as.factor("XI_02A4")
-aux_data_index_4_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_4_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_4_10min)==0) {
+#   aux_data_index_4_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_4_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_4_10min) 
+# }
+# aux_data_index_4_10min_persistent_durations_list$scenario <- as.factor("XI_02A4")
+# aux_data_index_4_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_4_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_index_4_10min)==0) {
 #   aux_data_index_4_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -53534,14 +53534,14 @@ aux_data_index_5_durations_list <- Facility_B_durations_index_5
 aux_data_index_5_durations_list$scenario <- as.factor("XI_02A5")
 aux_data_index_5_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_5)==0) {
-  aux_data_index_5_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_5_transient_durations_list <- as.data.frame(transient_durations_list_index_5)
-}
-aux_data_index_5_transient_durations_list$scenario <- as.factor("XI_02A5")
-aux_data_index_5_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_5_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_5)==0) {
+#   aux_data_index_5_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_5_transient_durations_list <- as.data.frame(transient_durations_list_index_5)
+# }
+# aux_data_index_5_transient_durations_list$scenario <- as.factor("XI_02A5")
+# aux_data_index_5_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_5_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_5$duration)==0) {
   aux_data_index_5_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -53573,15 +53573,15 @@ aux_data_index_5_uncleanable_transient_durations_list$type <- as.factor("Transie
 colnames(aux_data_index_5_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_5_uncleanable_transient_durations_list <- subset(aux_data_index_5_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_5)==0) {
-  aux_data_index_5_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_5_persistent_durations_list <- as.data.frame(persistent_durations_list_index_5) 
-}
-aux_data_index_5_persistent_durations_list$scenario <- as.factor("XI_02A5")
-aux_data_index_5_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_5_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_5)==0) {
+#   aux_data_index_5_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_5_persistent_durations_list <- as.data.frame(persistent_durations_list_index_5) 
+# }
+# aux_data_index_5_persistent_durations_list$scenario <- as.factor("XI_02A5")
+# aux_data_index_5_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_5_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(persistent_long_durations_list_index_5$duration)==0) {
 #   aux_data_index_5_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -53814,14 +53814,14 @@ aux_data_index_5_10min_durations_list <- Facility_B_durations_index_5
 aux_data_index_5_10min_durations_list$scenario <- as.factor("XI_02A5")
 aux_data_index_5_10min_durations_list$type <- as.factor("All")
 
-if (length(transient_durations_list_index_5_10min)==0) {
-  aux_data_index_5_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_5_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_5_10min) 
-}
-aux_data_index_5_10min_transient_durations_list$scenario <- as.factor("XI_02A5")
-aux_data_index_5_10min_transient_durations_list$type <- as.factor("Transient")
-colnames(aux_data_index_5_10min_transient_durations_list) <- c("duration", "scenario","type")
+# if (length(transient_durations_list_index_5_10min)==0) {
+#   aux_data_index_5_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_5_10min_transient_durations_list <- as.data.frame(transient_durations_list_index_5_10min) 
+# }
+# aux_data_index_5_10min_transient_durations_list$scenario <- as.factor("XI_02A5")
+# aux_data_index_5_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_index_5_10min_transient_durations_list) <- c("duration", "scenario","type")
 
 if (length(transient_long_durations_list_index_5_10min$duration)==0) {
   aux_data_index_5_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
@@ -53853,15 +53853,15 @@ aux_data_index_5_10min_uncleanable_transient_durations_list$type <- as.factor("T
 colnames(aux_data_index_5_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_5_10min_uncleanable_transient_durations_list <- subset(aux_data_index_5_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
 
-if (length(persistent_durations_list_index_5_10min)==0) {
-  aux_data_index_5_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
-} else {
-  aux_data_index_5_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_5_10min) 
-}
-aux_data_index_5_10min_persistent_durations_list$scenario <- as.factor("XI_02A5")
-aux_data_index_5_10min_persistent_durations_list$type <- as.factor("Persistent")
-colnames(aux_data_index_5_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# if (length(persistent_durations_list_index_5_10min)==0) {
+#   aux_data_index_5_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_index_5_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_index_5_10min) 
+# }
+# aux_data_index_5_10min_persistent_durations_list$scenario <- as.factor("XI_02A5")
+# aux_data_index_5_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_index_5_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
 # if (length(excess_durations_list_index_5_10min)==0) {
 #   aux_data_index_5_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -54142,7 +54142,7 @@ aux_data_index_6_uncleanable_transient_durations_list <- subset(aux_data_index_6
 # aux_data_index_6_persistent_durations_list$scenario <- as.factor("XI_02A6")
 # aux_data_index_6_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_index_6_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(excess_durations_list_index_6$duration)==0) {
 #   aux_data_index_6_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -54422,7 +54422,7 @@ aux_data_index_6_10min_uncleanable_transient_durations_list <- subset(aux_data_i
 # aux_data_index_6_10min_persistent_durations_list$scenario <- as.factor("XI_02A6")
 # aux_data_index_6_10min_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_index_6_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(excess_durations_list_index_6_10min)==0) {
 #   aux_data_index_6_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -54461,6 +54461,1689 @@ aux_data_index_6_10min_uncleanable_persistent_durations_list$scenario <- as.fact
 aux_data_index_6_10min_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
 colnames(aux_data_index_6_10min_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
 aux_data_index_6_10min_uncleanable_persistent_durations_list <- subset(aux_data_index_6_10min_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+#EC_01####
+agent_list_areas <- as.vector(agents_list_crate_prev_75pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_75pc$min_duration)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_duration)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q1_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$median_duration)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q3_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$max_duration)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$contamination_events)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$times_persistent)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$min_persistent_duration)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_persistent_duration)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q1_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$median_persistent_duration)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q3_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$max_persistent_duration)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$balanced_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_01")
+
+aux_data_crate_prev_75pc <- aux_data
+
+aux_data_crate_prev_75pc_durations_all <- aux_data_crate_prev_75pc[which(aux_data_crate_prev_75pc$type=="Minimum Duration (All)" | aux_data_crate_prev_75pc$type=="Mean Duration (All)" | aux_data_crate_prev_75pc$type=="C. Duration Q1 (All)" | aux_data_crate_prev_75pc$type=="Median Duration (All)" | aux_data_crate_prev_75pc$type=="C. Duration Q3 (All)" | aux_data_crate_prev_75pc$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_75pc_durations_per <- aux_data_crate_prev_75pc[which(aux_data_crate_prev_75pc$type=="Minimum Duration (Per)" | aux_data_crate_prev_75pc$type=="Mean Duration (Per)" | aux_data_crate_prev_75pc$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_75pc$type=="Median Duration (Per)" | aux_data_crate_prev_75pc$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_75pc$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_75pc_freq_count <- aux_data_crate_prev_75pc[which(aux_data_crate_prev_75pc$type=="Times Contaminated" | aux_data_crate_prev_75pc$type=="Times Persistent"),]
+
+aux_data_crate_prev_75pc_mean_per_freq <- aux_data_crate_prev_75pc[which(aux_data_crate_prev_75pc$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_75pc$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_75pc_durations_list <- Facility_B_durations_crate_prev_75pc
+aux_data_crate_prev_75pc_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_75pc)==0) {
+#   aux_data_crate_prev_75pc_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_75pc)
+# }
+# aux_data_crate_prev_75pc_transient_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_75pc_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_long_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_75pc_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_long_transient_durations_list <- subset(aux_data_crate_prev_75pc_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_short_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_75pc_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_short_transient_durations_list <- subset(aux_data_crate_prev_75pc_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_uncleanable_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_75pc_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_75pc_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_75pc)==0) {
+#   aux_data_crate_prev_75pc_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_75pc) 
+# }
+# aux_data_crate_prev_75pc_persistent_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_75pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(persistent_long_durations_list_crate_prev_75pc$duration)==0) {
+#   aux_data_crate_prev_75pc_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_75pc) 
+# }
+# aux_data_crate_prev_75pc_excess_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_75pc_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_long_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_75pc_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_long_persistent_durations_list <- subset(aux_data_crate_prev_75pc_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_short_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_75pc_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_short_persistent_durations_list <- subset(aux_data_crate_prev_75pc_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_75pc$duration)==0) {
+  aux_data_crate_prev_75pc_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_75pc) 
+}
+aux_data_crate_prev_75pc_uncleanable_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_75pc_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_75pc_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+agent_list_areas <- as.vector(agents_list_crate_prev_75pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_75pc$min_duration_10min)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q1_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$median_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q3_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$max_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$contamination_events_10min)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$times_persistent_10min)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$min_persistent_duration_10min)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_persistent_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q1_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$median_persistent_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$q3_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$max_persistent_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$mean_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_75pc$balanced_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_01")
+
+aux_data_crate_prev_75pc_10min <- aux_data
+
+aux_data_crate_prev_75pc_10min_durations_all <- aux_data_crate_prev_75pc_10min[which(aux_data_crate_prev_75pc_10min$type=="Minimum Duration (All)" | aux_data_crate_prev_75pc_10min$type=="Mean Duration (All)" | aux_data_crate_prev_75pc_10min$type=="C. Duration Q1 (All)" | aux_data_crate_prev_75pc_10min$type=="Median Duration (All)" | aux_data_crate_prev_75pc_10min$type=="C. Duration Q3 (All)" | aux_data_crate_prev_75pc_10min$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_75pc_10min_durations_per <- aux_data_crate_prev_75pc_10min[which(aux_data_crate_prev_75pc_10min$type=="Minimum Duration (Per)" | aux_data_crate_prev_75pc_10min$type=="Mean Duration (Per)" | aux_data_crate_prev_75pc_10min$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_75pc_10min$type=="Median Duration (Per)" | aux_data_crate_prev_75pc_10min$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_75pc_10min$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_75pc_10min_freq_count <- aux_data_crate_prev_75pc_10min[which(aux_data_crate_prev_75pc_10min$type=="Times Contaminated" | aux_data_crate_prev_75pc_10min$type=="Times Persistent"),]
+
+aux_data_crate_prev_75pc_10min_mean_per_freq <- aux_data_crate_prev_75pc_10min[which(aux_data_crate_prev_75pc_10min$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_75pc_10min$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_75pc_10min_durations_list <- Facility_B_durations_crate_prev_75pc
+aux_data_crate_prev_75pc_10min_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_75pc_10min)==0) {
+#   aux_data_crate_prev_75pc_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_10min_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_75pc_10min) 
+# }
+# aux_data_crate_prev_75pc_10min_transient_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_75pc_10min_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_long_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_75pc_10min_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_long_transient_durations_list <- subset(aux_data_crate_prev_75pc_10min_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_short_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_75pc_10min_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_short_transient_durations_list <- subset(aux_data_crate_prev_75pc_10min_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_75pc_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_75pc_10min)==0) {
+#   aux_data_crate_prev_75pc_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_75pc_10min) 
+# }
+# aux_data_crate_prev_75pc_10min_persistent_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_75pc_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(excess_durations_list_crate_prev_75pc_10min)==0) {
+#   aux_data_crate_prev_75pc_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_75pc_10min_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_75pc_10min) 
+# }
+# aux_data_crate_prev_75pc_10min_excess_durations_list$scenario <- as.factor("EC_01")
+# aux_data_crate_prev_75pc_10min_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_75pc_10min_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_long_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_75pc_10min_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_long_persistent_durations_list <- subset(aux_data_crate_prev_75pc_10min_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_short_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_75pc_10min_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_short_persistent_durations_list <- subset(aux_data_crate_prev_75pc_10min_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_75pc_10min$duration)==0) {
+  aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_75pc_10min) 
+}
+aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list$scenario <- as.factor("EC_01")
+aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_75pc_10min_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+#EC_02####
+agent_list_areas <- as.vector(agents_list_crate_prev_50pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_50pc$min_duration)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_duration)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q1_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$median_duration)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q3_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$max_duration)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$contamination_events)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$times_persistent)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$min_persistent_duration)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_persistent_duration)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q1_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$median_persistent_duration)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q3_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$max_persistent_duration)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$balanced_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_02")
+
+aux_data_crate_prev_50pc <- aux_data
+
+aux_data_crate_prev_50pc_durations_all <- aux_data_crate_prev_50pc[which(aux_data_crate_prev_50pc$type=="Minimum Duration (All)" | aux_data_crate_prev_50pc$type=="Mean Duration (All)" | aux_data_crate_prev_50pc$type=="C. Duration Q1 (All)" | aux_data_crate_prev_50pc$type=="Median Duration (All)" | aux_data_crate_prev_50pc$type=="C. Duration Q3 (All)" | aux_data_crate_prev_50pc$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_50pc_durations_per <- aux_data_crate_prev_50pc[which(aux_data_crate_prev_50pc$type=="Minimum Duration (Per)" | aux_data_crate_prev_50pc$type=="Mean Duration (Per)" | aux_data_crate_prev_50pc$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_50pc$type=="Median Duration (Per)" | aux_data_crate_prev_50pc$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_50pc$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_50pc_freq_count <- aux_data_crate_prev_50pc[which(aux_data_crate_prev_50pc$type=="Times Contaminated" | aux_data_crate_prev_50pc$type=="Times Persistent"),]
+
+aux_data_crate_prev_50pc_mean_per_freq <- aux_data_crate_prev_50pc[which(aux_data_crate_prev_50pc$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_50pc$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_50pc_durations_list <- Facility_B_durations_crate_prev_50pc
+aux_data_crate_prev_50pc_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_50pc)==0) {
+#   aux_data_crate_prev_50pc_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_50pc)
+# }
+# aux_data_crate_prev_50pc_transient_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_50pc_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_long_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_50pc_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_long_transient_durations_list <- subset(aux_data_crate_prev_50pc_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_short_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_50pc_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_short_transient_durations_list <- subset(aux_data_crate_prev_50pc_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_uncleanable_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_50pc_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_50pc_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_50pc)==0) {
+#   aux_data_crate_prev_50pc_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_50pc) 
+# }
+# aux_data_crate_prev_50pc_persistent_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_50pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(persistent_long_durations_list_crate_prev_50pc$duration)==0) {
+#   aux_data_crate_prev_50pc_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_50pc) 
+# }
+# aux_data_crate_prev_50pc_excess_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_50pc_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_long_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_50pc_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_long_persistent_durations_list <- subset(aux_data_crate_prev_50pc_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_short_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_50pc_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_short_persistent_durations_list <- subset(aux_data_crate_prev_50pc_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_50pc$duration)==0) {
+  aux_data_crate_prev_50pc_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_50pc) 
+}
+aux_data_crate_prev_50pc_uncleanable_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_50pc_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_50pc_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+agent_list_areas <- as.vector(agents_list_crate_prev_50pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_50pc$min_duration_10min)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q1_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$median_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q3_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$max_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$contamination_events_10min)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$times_persistent_10min)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$min_persistent_duration_10min)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_persistent_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q1_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$median_persistent_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$q3_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$max_persistent_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$mean_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_50pc$balanced_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_02")
+
+aux_data_crate_prev_50pc_10min <- aux_data
+
+aux_data_crate_prev_50pc_10min_durations_all <- aux_data_crate_prev_50pc_10min[which(aux_data_crate_prev_50pc_10min$type=="Minimum Duration (All)" | aux_data_crate_prev_50pc_10min$type=="Mean Duration (All)" | aux_data_crate_prev_50pc_10min$type=="C. Duration Q1 (All)" | aux_data_crate_prev_50pc_10min$type=="Median Duration (All)" | aux_data_crate_prev_50pc_10min$type=="C. Duration Q3 (All)" | aux_data_crate_prev_50pc_10min$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_50pc_10min_durations_per <- aux_data_crate_prev_50pc_10min[which(aux_data_crate_prev_50pc_10min$type=="Minimum Duration (Per)" | aux_data_crate_prev_50pc_10min$type=="Mean Duration (Per)" | aux_data_crate_prev_50pc_10min$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_50pc_10min$type=="Median Duration (Per)" | aux_data_crate_prev_50pc_10min$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_50pc_10min$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_50pc_10min_freq_count <- aux_data_crate_prev_50pc_10min[which(aux_data_crate_prev_50pc_10min$type=="Times Contaminated" | aux_data_crate_prev_50pc_10min$type=="Times Persistent"),]
+
+aux_data_crate_prev_50pc_10min_mean_per_freq <- aux_data_crate_prev_50pc_10min[which(aux_data_crate_prev_50pc_10min$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_50pc_10min$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_50pc_10min_durations_list <- Facility_B_durations_crate_prev_50pc
+aux_data_crate_prev_50pc_10min_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_50pc_10min)==0) {
+#   aux_data_crate_prev_50pc_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_10min_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_50pc_10min) 
+# }
+# aux_data_crate_prev_50pc_10min_transient_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_50pc_10min_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_long_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_50pc_10min_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_long_transient_durations_list <- subset(aux_data_crate_prev_50pc_10min_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_short_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_50pc_10min_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_short_transient_durations_list <- subset(aux_data_crate_prev_50pc_10min_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_50pc_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_50pc_10min)==0) {
+#   aux_data_crate_prev_50pc_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_50pc_10min) 
+# }
+# aux_data_crate_prev_50pc_10min_persistent_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_50pc_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(excess_durations_list_crate_prev_50pc_10min)==0) {
+#   aux_data_crate_prev_50pc_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_50pc_10min_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_50pc_10min) 
+# }
+# aux_data_crate_prev_50pc_10min_excess_durations_list$scenario <- as.factor("EC_02")
+# aux_data_crate_prev_50pc_10min_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_50pc_10min_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_long_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_50pc_10min_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_long_persistent_durations_list <- subset(aux_data_crate_prev_50pc_10min_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_short_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_50pc_10min_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_short_persistent_durations_list <- subset(aux_data_crate_prev_50pc_10min_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_50pc_10min$duration)==0) {
+  aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_50pc_10min) 
+}
+aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list$scenario <- as.factor("EC_02")
+aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_50pc_10min_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+#EC_03####
+agent_list_areas <- as.vector(agents_list_crate_prev_25pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_25pc$min_duration)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_duration)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q1_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$median_duration)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q3_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$max_duration)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$contamination_events)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$times_persistent)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$min_persistent_duration)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_persistent_duration)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q1_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$median_persistent_duration)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q3_persistent_duration)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$max_persistent_duration)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$balanced_times_persistent)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_03")
+
+aux_data_crate_prev_25pc <- aux_data
+
+aux_data_crate_prev_25pc_durations_all <- aux_data_crate_prev_25pc[which(aux_data_crate_prev_25pc$type=="Minimum Duration (All)" | aux_data_crate_prev_25pc$type=="Mean Duration (All)" | aux_data_crate_prev_25pc$type=="C. Duration Q1 (All)" | aux_data_crate_prev_25pc$type=="Median Duration (All)" | aux_data_crate_prev_25pc$type=="C. Duration Q3 (All)" | aux_data_crate_prev_25pc$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_25pc_durations_per <- aux_data_crate_prev_25pc[which(aux_data_crate_prev_25pc$type=="Minimum Duration (Per)" | aux_data_crate_prev_25pc$type=="Mean Duration (Per)" | aux_data_crate_prev_25pc$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_25pc$type=="Median Duration (Per)" | aux_data_crate_prev_25pc$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_25pc$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_25pc_freq_count <- aux_data_crate_prev_25pc[which(aux_data_crate_prev_25pc$type=="Times Contaminated" | aux_data_crate_prev_25pc$type=="Times Persistent"),]
+
+aux_data_crate_prev_25pc_mean_per_freq <- aux_data_crate_prev_25pc[which(aux_data_crate_prev_25pc$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_25pc$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_25pc_durations_list <- Facility_B_durations_crate_prev_25pc
+aux_data_crate_prev_25pc_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_25pc)==0) {
+#   aux_data_crate_prev_25pc_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_25pc)
+# }
+# aux_data_crate_prev_25pc_transient_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_25pc_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_long_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_25pc_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_long_transient_durations_list <- subset(aux_data_crate_prev_25pc_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_short_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_25pc_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_short_transient_durations_list <- subset(aux_data_crate_prev_25pc_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_uncleanable_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_25pc_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_25pc_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_25pc)==0) {
+#   aux_data_crate_prev_25pc_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_25pc) 
+# }
+# aux_data_crate_prev_25pc_persistent_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_25pc_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(persistent_long_durations_list_crate_prev_25pc$duration)==0) {
+#   aux_data_crate_prev_25pc_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_25pc) 
+# }
+# aux_data_crate_prev_25pc_excess_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_25pc_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_long_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_25pc_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_long_persistent_durations_list <- subset(aux_data_crate_prev_25pc_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_short_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_25pc_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_short_persistent_durations_list <- subset(aux_data_crate_prev_25pc_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_25pc$duration)==0) {
+  aux_data_crate_prev_25pc_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_25pc) 
+}
+aux_data_crate_prev_25pc_uncleanable_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_25pc_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_25pc_uncleanable_persistent_durations_list, select=-c(agent,iteration))
+
+agent_list_areas <- as.vector(agents_list_crate_prev_25pc$area)
+agent_list_areas[which(agent_list_areas!="loading" & agent_list_areas!="cleaning" & agent_list_areas!="sorting" & agent_list_areas!="reject" & agent_list_areas!="bag-packing" & agent_list_areas!="tray-packing")] <- "other"
+
+aux_data <- as.data.frame(agents_list_crate_prev_25pc$min_duration_10min)
+aux_data$type <- as.factor("Minimum Duration (All)")
+aux_data$area <- agent_list_areas
+aux_data <- aux_data[order(aux_data$area),]
+aux_data <- aux_data[,!(names(aux_data) %in% "area")]
+rownames(aux_data) <- NULL
+aux_data$id <- seq(1:225)
+colnames(aux_data) <- c("value", "type", "id")
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q1_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$median_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q3_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$max_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (All)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$contamination_events_10min)
+aux_data_2$type <- as.factor("Times Contaminated")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$times_persistent_10min)
+aux_data_2$type <- as.factor("Times Persistent")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$min_persistent_duration_10min)
+aux_data_2$type <- as.factor("Minimum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_persistent_duration_10min)
+aux_data_2$type <- as.factor("Mean Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q1_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q1 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$median_persistent_duration_10min)
+aux_data_2$type <- as.factor("Median Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$q3_persistent_duration_10min)
+aux_data_2$type <- as.factor("C. Duration Q3 (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$max_persistent_duration_10min)
+aux_data_2$type <- as.factor("Maximum Duration (Per)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$mean_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Overall)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data_2 <- as.data.frame(agents_list_crate_prev_25pc$balanced_times_persistent_10min)
+aux_data_2$type <- as.factor("Mean Times Persistent (Per It.)")
+aux_data_2$area <- agent_list_areas
+aux_data_2 <- aux_data_2[order(aux_data_2$area),]
+aux_data_2 <- aux_data_2[,!(names(aux_data_2) %in% "area")]
+rownames(aux_data_2) <- NULL
+aux_data_2$id <- seq(1:225)
+colnames(aux_data_2) <- c("value", "type", "id")
+
+aux_data <- rbind(aux_data, aux_data_2)
+
+aux_data$scenario <- as.factor("EC_03")
+
+aux_data_crate_prev_25pc_10min <- aux_data
+
+aux_data_crate_prev_25pc_10min_durations_all <- aux_data_crate_prev_25pc_10min[which(aux_data_crate_prev_25pc_10min$type=="Minimum Duration (All)" | aux_data_crate_prev_25pc_10min$type=="Mean Duration (All)" | aux_data_crate_prev_25pc_10min$type=="C. Duration Q1 (All)" | aux_data_crate_prev_25pc_10min$type=="Median Duration (All)" | aux_data_crate_prev_25pc_10min$type=="C. Duration Q3 (All)" | aux_data_crate_prev_25pc_10min$type=="Maximum Duration (All)"),]
+
+aux_data_crate_prev_25pc_10min_durations_per <- aux_data_crate_prev_25pc_10min[which(aux_data_crate_prev_25pc_10min$type=="Minimum Duration (Per)" | aux_data_crate_prev_25pc_10min$type=="Mean Duration (Per)" | aux_data_crate_prev_25pc_10min$type=="C. Duration Q1 (Per)" | aux_data_crate_prev_25pc_10min$type=="Median Duration (Per)" | aux_data_crate_prev_25pc_10min$type=="C. Duration Q3 (Per)" | aux_data_crate_prev_25pc_10min$type=="Maximum Duration (Per)"),]
+
+aux_data_crate_prev_25pc_10min_freq_count <- aux_data_crate_prev_25pc_10min[which(aux_data_crate_prev_25pc_10min$type=="Times Contaminated" | aux_data_crate_prev_25pc_10min$type=="Times Persistent"),]
+
+aux_data_crate_prev_25pc_10min_mean_per_freq <- aux_data_crate_prev_25pc_10min[which(aux_data_crate_prev_25pc_10min$type=="Mean Times Persistent (Overall)" | aux_data_crate_prev_25pc_10min$type=="Mean Times Persistent (Per It.)"),]
+
+aux_data_crate_prev_25pc_10min_durations_list <- Facility_B_durations_crate_prev_25pc
+aux_data_crate_prev_25pc_10min_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_durations_list$type <- as.factor("All")
+
+# if (length(transient_durations_list_crate_prev_25pc_10min)==0) {
+#   aux_data_crate_prev_25pc_10min_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_10min_transient_durations_list <- as.data.frame(transient_durations_list_crate_prev_25pc_10min) 
+# }
+# aux_data_crate_prev_25pc_10min_transient_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_10min_transient_durations_list$type <- as.factor("Transient")
+# colnames(aux_data_crate_prev_25pc_10min_transient_durations_list) <- c("duration", "scenario","type")
+
+if (length(transient_long_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_long_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_long_transient_durations_list <- as.data.frame(transient_long_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_long_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_long_transient_durations_list$type <- as.factor("Transient (Long)")
+colnames(aux_data_crate_prev_25pc_10min_long_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_long_transient_durations_list <- subset(aux_data_crate_prev_25pc_10min_long_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_short_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_short_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_short_transient_durations_list <- as.data.frame(transient_short_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_short_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_short_transient_durations_list$type <- as.factor("Transient (Short)")
+colnames(aux_data_crate_prev_25pc_10min_short_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_short_transient_durations_list <- subset(aux_data_crate_prev_25pc_10min_short_transient_durations_list, select=-c(agent,iteration))
+
+if (length(transient_uncleanable_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list <- as.data.frame(transient_uncleanable_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list$type <- as.factor("Transient (Uncleanable)")
+colnames(aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list <- subset(aux_data_crate_prev_25pc_10min_uncleanable_transient_durations_list, select=-c(agent,iteration))
+
+# if (length(persistent_durations_list_crate_prev_25pc_10min)==0) {
+#   aux_data_crate_prev_25pc_10min_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_10min_persistent_durations_list <- as.data.frame(persistent_durations_list_crate_prev_25pc_10min) 
+# }
+# aux_data_crate_prev_25pc_10min_persistent_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_10min_persistent_durations_list$type <- as.factor("Persistent")
+# colnames(aux_data_crate_prev_25pc_10min_persistent_durations_list) <- c("duration", "scenario","type")
+# 
+# if (length(excess_durations_list_crate_prev_25pc_10min)==0) {
+#   aux_data_crate_prev_25pc_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+# } else {
+#   aux_data_crate_prev_25pc_10min_excess_durations_list <- as.data.frame(excess_durations_list_crate_prev_25pc_10min) 
+# }
+# aux_data_crate_prev_25pc_10min_excess_durations_list$scenario <- as.factor("EC_03")
+# aux_data_crate_prev_25pc_10min_excess_durations_list$type <- as.factor("Remainder")
+# colnames(aux_data_crate_prev_25pc_10min_excess_durations_list) <- c("duration", "scenario","type")
+
+if (length(persistent_long_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_long_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_long_persistent_durations_list <- as.data.frame(persistent_long_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_long_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_long_persistent_durations_list$type <- as.factor("Persistent (Long)")
+colnames(aux_data_crate_prev_25pc_10min_long_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_long_persistent_durations_list <- subset(aux_data_crate_prev_25pc_10min_long_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_short_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_short_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_short_persistent_durations_list <- as.data.frame(persistent_short_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_short_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_short_persistent_durations_list$type <- as.factor("Persistent (Short)")
+colnames(aux_data_crate_prev_25pc_10min_short_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_short_persistent_durations_list <- subset(aux_data_crate_prev_25pc_10min_short_persistent_durations_list, select=-c(agent,iteration))
+
+if (length(persistent_uncleanable_durations_list_crate_prev_25pc_10min$duration)==0) {
+  aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list <- as.data.frame(t(c(NA,NA,NA)))
+} else {
+  aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list <- as.data.frame(persistent_uncleanable_durations_list_crate_prev_25pc_10min) 
+}
+aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list$scenario <- as.factor("EC_03")
+aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list$type <- as.factor("Persistent (Uncleanable)")
+colnames(aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list) <- c("duration", "agent", "iteration", "scenario","type")
+aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list <- subset(aux_data_crate_prev_25pc_10min_uncleanable_persistent_durations_list, select=-c(agent,iteration))
 
 #EC_04####
 agent_list_areas <- as.vector(agents_list_crate_prev_0pc$area)
@@ -54703,7 +56386,7 @@ aux_data_crate_prev_0pc_uncleanable_transient_durations_list <- subset(aux_data_
 # aux_data_crate_prev_0pc_persistent_durations_list$scenario <- as.factor("EC_04")
 # aux_data_crate_prev_0pc_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_crate_prev_0pc_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(persistent_long_durations_list_crate_prev_0pc$duration)==0) {
 #   aux_data_crate_prev_0pc_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -54983,7 +56666,7 @@ aux_data_crate_prev_0pc_10min_uncleanable_transient_durations_list <- subset(aux
 # aux_data_crate_prev_0pc_10min_persistent_durations_list$scenario <- as.factor("EC_04")
 # aux_data_crate_prev_0pc_10min_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_crate_prev_0pc_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(excess_durations_list_crate_prev_0pc_10min)==0) {
 #   aux_data_crate_prev_0pc_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -55264,7 +56947,7 @@ aux_data_prob_intervention_uncleanable_transient_durations_list <- subset(aux_da
 # aux_data_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_02")
 # aux_data_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(persistent_long_durations_list_prob_intervention$duration)==0) {
 #   aux_data_prob_intervention_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -55544,7 +57227,7 @@ aux_data_prob_intervention_10min_uncleanable_transient_durations_list <- subset(
 # aux_data_prob_intervention_10min_persistent_durations_list$scenario <- as.factor("AI_02")
 # aux_data_prob_intervention_10min_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_prob_intervention_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(excess_durations_list_prob_intervention_10min)==0) {
 #   aux_data_prob_intervention_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -55825,7 +57508,7 @@ aux_data_partial_prob_intervention_uncleanable_transient_durations_list <- subse
 # aux_data_partial_prob_intervention_persistent_durations_list$scenario <- as.factor("AI_03")
 # aux_data_partial_prob_intervention_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_partial_prob_intervention_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(persistent_long_durations_list_partial_prob_intervention$duration)==0) {
 #   aux_data_partial_prob_intervention_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -56105,7 +57788,7 @@ aux_data_partial_prob_intervention_10min_uncleanable_transient_durations_list <-
 # aux_data_partial_prob_intervention_10min_persistent_durations_list$scenario <- as.factor("AI_03")
 # aux_data_partial_prob_intervention_10min_persistent_durations_list$type <- as.factor("Persistent")
 # colnames(aux_data_partial_prob_intervention_10min_persistent_durations_list) <- c("duration", "scenario","type")
-
+# 
 # if (length(excess_durations_list_partial_prob_intervention_10min)==0) {
 #   aux_data_partial_prob_intervention_10min_excess_durations_list <- as.data.frame(t(c(NA,NA,NA)))
 # } else {
@@ -56691,6 +58374,7 @@ write.csv(crate_prev_0pc_allwed_prev,paste0(getwd(),'/Facility_B_EC_04_Prev.csv'
 write.csv(prob_intervention_allwed_prev,paste0(getwd(),'/Facility_B_AI_02_Prev.csv'), row.names = FALSE)
 write.csv(partial_prob_intervention_allwed_prev,paste0(getwd(),'/Facility_B_AI_03_Prev.csv'), row.names = FALSE)
 write.csv(connections_intervention_allwed_prev,paste0(getwd(),'/Facility_B_AI_04_Prev.csv'), row.names = FALSE)
+write.csv(aux_data_supplemental_durations_list,paste0(getwd(),'/Facility_B_Durations_Supplemental.csv'), row.names = FALSE)
 ```
 
 ```{r Supplemental Figures}
