@@ -23,6 +23,66 @@ get_legend<-function(myggplot){
 
 ```{r Figure 1}
 #Import
+Facility_A_data_matrix_melted <- read.csv('Facility_A_wk8_Sensitivity_Matrix.csv')
+Facility_B_data_matrix_melted <- read.csv('Facility_B_wk8_Sensitivity_Matrix.csv')
+#Plot
+figure_a <- ggplot(Facility_A_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
+  geom_bar(stat = "identity") +
+  ggtitle('') +
+  xlab('') +
+  ylab('Correlation coefficient (p=0.0010)') +
+  ylim(-0.5,1.0) +
+  coord_flip() +
+  geom_hline(yintercept = 0) +
+  theme_bw() +
+  scale_x_discrete(
+    labels = c(
+      expression(tau[33]),
+      expression(alpha),
+      expression("R"["d"]),
+      expression(tau[11]),
+      expression("P"["z"]),
+      expression("P"[11]),
+      expression("N"["R"])
+    )
+  )
+figure_b <- ggplot(Facility_B_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
+  geom_bar(stat = "identity") +
+  ggtitle('') +
+  xlab('') +
+  ylab('Correlation coefficient (p=0.0011)') +
+  ylim(-0.5,1.0) +
+  coord_flip() +
+  geom_hline(yintercept = 0) +
+  theme_bw() +
+  scale_x_discrete(
+    labels = c(
+      expression(tau[33]),
+      expression("P"[13]),
+      expression("P"["Z"]),
+      expression("N"["r"]),
+      expression("P"[31]),
+      expression(tau[11]),
+      expression(alpha),
+      expression("R"["d"]),
+      expression("P"[11]),
+      expression("N"["R"])
+    )
+  )
+
+figure_1 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 1,
+  nrow = 2,
+  common.legend = FALSE
+)
+ggsave("Figure_1.tif", plot = figure_1, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_1
+```
+
+```{r Figure 2}
+#Import
 Facility_A_baseline_allwed_prev <- read.csv('Facility_A_Baseline_Prev.csv')
 Facility_A_baseline_allwed_prev$scenario <- as.factor(Facility_A_baseline_allwed_prev$scenario)
 Facility_A_baseline_allwed_prev$water <- factor(Facility_A_baseline_allwed_prev$water, levels = c('Wet', 'Dry'))
@@ -115,7 +175,7 @@ figure_d <- ggplot(Facility_B_baseline_allwed_concs, aes(x=week, y=log10(concent
     axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
   )
 
-figure_1 <- ggarrange(
+figure_2 <- ggarrange(
   figure_a, figure_b, figure_c, figure_d,
   labels = c('A','B','C','D'),
   ncol = 2,
@@ -124,11 +184,11 @@ figure_1 <- ggarrange(
   legend = "bottom"
 )
 
-ggsave("Figure_1.tif", plot = figure_1, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
-figure_1
+ggsave("Figure_2.tif", plot = figure_2, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
+figure_2
 ```
 
-```{r Figure 2}
+```{r Figure 3}
 #Import
 Facility_A_baseline_fandl_wed_prev <- read.csv('Facility_A_Baseline_1and8_Prev.csv')
 Facility_A_baseline_fandl_wed_prev$area <- factor(Facility_A_baseline_fandl_wed_prev$area, levels = c('loading', 'cleaning', 'sorting', 'bag packing', 'tray packing', 'reject', 'other'))
@@ -224,7 +284,7 @@ figure_d <- ggplot(Facility_B_baseline_fandl_concs, aes(x=area, y=log10(concentr
     axis.title.y = element_text(color = "grey20", size = 18, angle = 90, hjust = .5, vjust = .5, face = "plain")
   )
 
-figure_2 <- ggarrange(
+figure_3 <- ggarrange(
   figure_a, figure_b, figure_c, figure_d,
   labels = c('A','B','C','D'),
   ncol = 2,
@@ -232,11 +292,11 @@ figure_2 <- ggarrange(
   common.legend = TRUE,
   legend = "bottom"
 )
-ggsave("Figure_2.tif", plot = figure_2, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
-figure_2
+ggsave("Figure_3.tif", plot = figure_3, device = "tiff",  width = 19.05, height = 22.23*0.8, units = "cm", dpi = 600, compression = "lzw")
+figure_3
 ```
 
-```{r Figure 4}
+```{r Figure 5}
 #Import
 Facility_A_durations_investigation <- read.csv('Facility_A_Durations_Investigation.csv')
 Facility_A_durations_investigation$scenario <- as.factor(Facility_A_durations_investigation$scenario)
@@ -304,18 +364,18 @@ figure_b <- ggplot() +
     axis.title.y = element_text(size=20)
   )
 
-figure_4 <- ggarrange(
+figure_5 <- ggarrange(
   figure_a, figure_b,
   labels = c('A', 'B'),
   ncol = 1,
   nrow = 2,
   common.legend = FALSE
 )
-ggsave("Figure_4.tif", plot = figure_4, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
-figure_4
+ggsave("Figure_5.tif", plot = figure_5, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_5
 ```
 
-```{r Figure 5}
+```{r Figure 6}
 #Import
 Facility_A_frequency_investigation <- read.csv('Facility_A_Frequency_Investigation.csv')
 Facility_A_frequency_investigation$type <- as.factor(Facility_A_frequency_investigation$type)
@@ -380,18 +440,18 @@ figure_b <- ggplot() +
     legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
   )
 
-figure_5 <- ggarrange(
+figure_6 <- ggarrange(
   figure_a, figure_b,
   labels = c('A', 'B'),
   ncol = 2,
   nrow = 1,
   common.legend = FALSE
 )
-ggsave("Figure_5.tif", plot = figure_5, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
-figure_5
+ggsave("Figure_6.tif", plot = figure_6, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_6
 ```
 
-```{r Figure 6}
+```{r Figure 7}
 #Import
 Facility_A_durations_corrective_actions <- read.csv('Facility_A_Durations_Corrective_Actions.csv')
 Facility_A_durations_corrective_actions$scenario <- as.factor(Facility_A_durations_corrective_actions$scenario)
@@ -458,18 +518,18 @@ figure_b <- ggplot() +
     axis.title.y = element_text(size=20)
   )
 
-figure_6 <- ggarrange(
+figure_7 <- ggarrange(
   figure_a, figure_b,
   labels = c('A', 'B'),
   ncol = 1,
   nrow = 2,
   common.legend = FALSE
 )
-ggsave("Figure_6.tif", plot = figure_6, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
-figure_6
+ggsave("Figure_7.tif", plot = figure_7, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_7
 ```
 
-```{r Figure 7}
+```{r Figure 8}
 #Import
 Facility_A_frequency_corrective_actions <- read.csv('Facility_A_Frequency_Corrective_Actions.csv')
 Facility_A_frequency_corrective_actions$type <- as.factor(Facility_A_frequency_corrective_actions$type)
@@ -534,74 +594,14 @@ figure_b <- ggplot() +
     legend.text=element_text(size=16, angle = 45, hjust = .5, vjust = .5)
   )
 
-figure_7 <- ggarrange(
+figure_8 <- ggarrange(
   figure_a, figure_b,
   labels = c('A', 'B'),
   ncol = 2,
   nrow = 1,
   common.legend = FALSE
 )
-ggsave("Figure_7.tif", plot = figure_7, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
-figure_7
-```
-
-```{r Figure 8}
-#Import
-Facility_A_data_matrix_melted <- read.csv('Facility_A_wk8_Sensitivity_Matrix.csv')
-Facility_B_data_matrix_melted <- read.csv('Facility_B_wk8_Sensitivity_Matrix.csv')
-#Plot
-figure_a <- ggplot(Facility_A_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
-  geom_bar(stat = "identity") +
-  ggtitle('') +
-  xlab('') +
-  ylab('') +
-  ylim(-0.5,1.0) +
-  coord_flip() +
-  geom_hline(yintercept = 0) +
-  theme_bw() +
-  scale_x_discrete(
-    labels = c(
-      expression(tau[33]),
-      expression(alpha),
-      expression("R"["d"]),
-      expression(tau[11]),
-      expression("P"["z"]),
-      expression("P"[11]),
-      expression("N"["R"])
-    )
-  )
-figure_b <- ggplot(Facility_B_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
-  geom_bar(stat = "identity") +
-  ggtitle('') +
-  xlab('') +
-  ylab('') +
-  ylim(-0.5,1.0) +
-  coord_flip() +
-  geom_hline(yintercept = 0) +
-  theme_bw() +
-  scale_x_discrete(
-    labels = c(
-      expression(tau[33]),
-      expression("P"[13]),
-      expression("P"["Z"]),
-      expression("N"["r"]),
-      expression("P"[31]),
-      expression(tau[11]),
-      expression(alpha),
-      expression("R"["d"]),
-      expression("P"[11]),
-      expression("N"["R"])
-    )
-  )
-
-figure_8 <- ggarrange(
-  figure_a, figure_b,
-  labels = c('A', 'B'),
-  ncol = 1,
-  nrow = 2,
-  common.legend = FALSE
-)
-ggsave("Figure_8.tif", plot = figure_8, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+ggsave("Figure_8.tif", plot = figure_8, width = 25, height = 27*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
 figure_8
 ```
 
@@ -961,3 +961,84 @@ figure_S7 <- ggarrange(
 ggsave("Figure_S7.tif", plot = figure_S7, width = 19.05, height = 11.10, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
 figure_S7
 ```
+
+```{r Figure SX - Unused}
+#Unused
+#Import
+Facility_A_durations_supplemental <- read.csv('Facility_A_Durations_Supplemental.csv')
+Facility_A_durations_supplemental$scenario <- as.factor(Facility_A_durations_supplemental$scenario)
+Facility_A_durations_supplemental$type <- factor(Facility_A_durations_supplemental$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+
+Facility_B_durations_supplemental <- read.csv('Facility_B_Durations_Supplemental.csv')
+Facility_B_durations_supplemental$scenario <- as.factor(Facility_B_durations_supplemental$scenario)
+Facility_B_durations_supplemental$type <- factor(Facility_B_durations_supplemental$type, levels = c("Transient (Short)","Transient (Long)","Transient (Uncleanable)","Persistent (Short)","Persistent (Long)","Persistent (Uncleanable)"))
+#Plot
+#Plot
+figure_a <- ggplot() +
+  geom_boxplot_pattern(
+    data = Facility_A_durations_supplemental,
+    mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+    fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+  ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.75),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+figure_b <- ggplot() +
+  geom_boxplot_pattern(
+    data = Facility_B_durations_supplemental,
+    mapping = aes(
+            x = type,
+            y = duration,
+            pattern = scenario,
+            pattern_angle = scenario),
+    fill = "white",
+        colour = "black",
+        pattern_spacing = 0.01,
+        pattern_fill = "black",
+        pattern_colour = "black"
+  ) +
+  scale_x_discrete(labels = c("Transient (D)","Transient (W)", "Transient (U)", "Persistent (D)","Persistent (W)", "Persistent (U)"), drop = FALSE) +
+  scale_y_continuous(breaks = c(0,seq(167, 1343, by = 168)),labels = c("0","1","2","3","4","5","6","7","8")) +
+  xlab("Contamination Event Type") +
+  ylab("Duration (Weeks)") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.25,0.75),
+    plot.title = element_text(size=20),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=15),
+    axis.title.x = element_text(size=20),
+    axis.title.y = element_text(size=20)
+  )
+
+figure_S8 <- ggarrange(
+  figure_a, figure_b,
+  labels = c('A', 'B'),
+  ncol = 1,
+  nrow = 2,
+  common.legend = FALSE
+)
+ggsave("Figure_S8.tif", plot = figure_S8, width = 19.05, height = 22.23*1, units = "cm", device = "tiff", dpi = 600, compression = "lzw")
+figure_S8
+```
+
