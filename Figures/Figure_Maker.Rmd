@@ -23,14 +23,26 @@ get_legend<-function(myggplot){
 
 ```{r Figure 1}
 #Import
-Facility_A_data_matrix_melted <- read.csv('Facility_A_wk8_Sensitivity_Matrix.csv')
-Facility_B_data_matrix_melted <- read.csv('Facility_B_wk8_Sensitivity_Matrix.csv')
+Facility_A_new_sig_prcc <- read.csv('Facility_A_wk8_Sensitivity_Matrix.csv')
+Facility_B_new_sig_prcc <- read.csv('Facility_B_wk8_Sensitivity_Matrix.csv')
 #Plot
+Facility_A_data_matrix <- matrix(c(Facility_A_new_sig_prcc$PRCC), ncol=length(Facility_A_new_sig_prcc$PRCC))
+colnames(Facility_A_data_matrix) <- rownames(Facility_A_new_sig_prcc)
+#ggplot of significant
+Facility_A_data_matrix_melted <- reshape2::melt(Facility_A_data_matrix)[2:3]
+Facility_A_data_matrix_melted <- transform(Facility_A_data_matrix_melted, variable=reorder(Var2, value))
+Facility_A_data_matrix_melted <- cbind(Facility_A_data_matrix_melted,Facility_A_new_sig_prcc$p.Value)
+colnames(Facility_A_data_matrix_melted) <- c("Var2","value","variable","p_value")
 figure_a <- ggplot(Facility_A_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
-  geom_bar(stat = "identity") +
+  geom_bar(stat = "identity", fill="lightgrey") +
+  geom_text(
+    aes(
+      label = format(p_value, scientific = TRUE, digits = 3)
+    )
+  ) +
   ggtitle('') +
   xlab('') +
-  ylab('Correlation coefficient (p=0.0010)') +
+  ylab('Correlation coefficient') +
   ylim(-0.5,1.0) +
   coord_flip() +
   geom_hline(yintercept = 0) +
@@ -46,11 +58,24 @@ figure_a <- ggplot(Facility_A_data_matrix_melted, aes(x = reorder(variable, valu
       expression("N"["R"])
     )
   )
+
+Facility_B_data_matrix <- matrix(c(Facility_B_new_sig_prcc$PRCC), ncol=length(Facility_B_new_sig_prcc$PRCC))
+colnames(Facility_B_data_matrix) <- rownames(Facility_B_new_sig_prcc)
+#ggplot of significant
+Facility_B_data_matrix_melted <- reshape2::melt(Facility_B_data_matrix)[2:3]
+Facility_B_data_matrix_melted <- transform(Facility_B_data_matrix_melted, variable=reorder(Var2, value))
+Facility_B_data_matrix_melted <- cbind(Facility_B_data_matrix_melted,Facility_B_new_sig_prcc$p.Value)
+colnames(Facility_B_data_matrix_melted) <- c("Var2","value","variable","p_value")
 figure_b <- ggplot(Facility_B_data_matrix_melted, aes(x = reorder(variable, value), y = value)) +
-  geom_bar(stat = "identity") +
+  geom_bar(stat = "identity", fill="lightgrey") +
+  geom_text(
+    aes(
+      label = format(p_value, scientific = TRUE, digits = 3)
+    )
+  ) +
   ggtitle('') +
   xlab('') +
-  ylab('Correlation coefficient (p=0.0011)') +
+  ylab('Correlation coefficient') +
   ylim(-0.5,1.0) +
   coord_flip() +
   geom_hline(yintercept = 0) +
