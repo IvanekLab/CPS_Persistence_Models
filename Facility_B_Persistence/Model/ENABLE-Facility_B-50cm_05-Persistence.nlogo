@@ -4615,6 +4615,9 @@ to go
   ;  write-output 1 ; uncomment for a single iteration if want time series contamination data
   ;run simulation but only collect data during last week - here is where you can add outputs specific to a facility
   let start-hour 24 + (24 * (time-of-simulation - 1) * 7)
+  ask zones [
+    set z-conc-list lput z-listeria-concentration z-conc-list
+  ]
   let stop-hour 167 + (24 * (time-of-simulation - 1) * 7)
   if ticks = start-hour [ set-initial-values set collect-data? true ]
   if ticks = stop-hour
@@ -4671,10 +4674,6 @@ to go
       ]
     ]
     stop
-  ]
-  ;  monitor-turtles ; per tick data collection
-  ask zones [
-    set z-conc-list lput z-listeria-concentration z-conc-list
   ]
   if (week = 1 and day = 4 and ticks mod 24 = 13) [
     monitor-wednesday-1
@@ -8870,7 +8869,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.2.0
+NetLogo 6.2.2
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -57407,6 +57406,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_No_Niches" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>

@@ -4748,6 +4748,9 @@ to go
   if ticks = start-hour [
     set-initial-values set collect-data? true
   ]
+  ask zones [
+    set z-conc-list lput z-listeria-concentration z-conc-list
+  ]
   if ticks = stop-hour [
     set total-contam-events (zone-to-zone + zone-to-patch + condensation-drip + introduction-zone4 + introduction-food + random-event + employee-fcs + nfcs-fcs )
     set median-z1-time median [z-time-contaminated] of zones with [z-category = 1]
@@ -4811,9 +4814,6 @@ to go
     stop
   ]
   ;  monitor-turtles ; per tick data collection
-  ask zones [
-    set z-conc-list lput z-listeria-concentration z-conc-list
-  ]
   if (week = 1 and day = 4 and ticks mod 24 = 13) [
     monitor-wednesday-1
   ]
@@ -9803,7 +9803,7 @@ scenario
 scenario
 0
 55
-56.0
+0.0
 1
 1
 NIL
@@ -9996,7 +9996,7 @@ SWITCH
 583
 hourly-data
 hourly-data
-1
+0
 1
 -1000
 
@@ -44784,6 +44784,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_No_Niches" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
