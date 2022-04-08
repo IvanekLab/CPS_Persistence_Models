@@ -1,5 +1,5 @@
 ;; Created (2019) by Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
-;; Adapted (2019) by Cecil Barnett-Neefs, Genevieve Sullivan, Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
+;; Adapted (2022) by Cecil Barnett-Neefs, Genevieve Sullivan, Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
 ;; Funding provided by American Frozen Food Institute (AFFI) and Center for Produce Safety (CPS)
 
 ;; An agent-based model that simulates Listeria spp. behavior in a food production facility and control strategies of cleaning and environmental sampling
@@ -2345,102 +2345,6 @@ globals [;define global variables that can be used and referenced anywhere in th
 
   lifetime-conc-list
   dirty-agent
-
-;  m-zone-0b t-zone-0b w-zone-0b r-zone-0b f-zone-0b
-;  m-zone-3b t-zone-3b w-zone-3b r-zone-3b f-zone-3b
-;  m-zone-4b t-zone-4b w-zone-4b r-zone-4b f-zone-4b
-;  m-zone-20b t-zone-20b w-zone-20b r-zone-20b f-zone-20b
-;  m-zone-26b t-zone-26b w-zone-26b r-zone-26b f-zone-26b
-;  m-zone-29b t-zone-29b w-zone-29b r-zone-29b f-zone-29b
-;  m-zone-30b t-zone-30b w-zone-30b r-zone-30b f-zone-30b
-;  m-zone-31b t-zone-31b w-zone-31b r-zone-31b f-zone-31b
-;  m-zone-38b t-zone-38b w-zone-38b r-zone-38b f-zone-38b
-;  m-zone-78b t-zone-78b w-zone-78b r-zone-78b f-zone-78b
-;  m-zone-116b t-zone-116b w-zone-116b r-zone-116b f-zone-116b
-;  m-zone-134b t-zone-134b w-zone-134b r-zone-134b f-zone-134b
-;  m-zone-166b t-zone-166b w-zone-166b r-zone-166b f-zone-166b
-;  m-zone-186b t-zone-186b w-zone-186b r-zone-186b f-zone-186b
-;  m-zone-187b t-zone-187b w-zone-187b r-zone-187b f-zone-187b
-;  m-zone-188b t-zone-188b w-zone-188b r-zone-188b f-zone-188b
-;  m-zone-190b t-zone-190b w-zone-190b r-zone-190b f-zone-190b
-;  m-zone-191b t-zone-191b w-zone-191b r-zone-191b f-zone-191b
-;  m-zone-193b t-zone-193b w-zone-193b r-zone-193b f-zone-193b
-;  m-zone-194b t-zone-194b w-zone-194b r-zone-194b f-zone-194b
-;  m-zone-195b t-zone-195b w-zone-195b r-zone-195b f-zone-195b
-;  m-zone-196b t-zone-196b w-zone-196b r-zone-196b f-zone-196b
-;  m-zone-197b t-zone-197b w-zone-197b r-zone-197b f-zone-197b
-;  m-zone-198b t-zone-198b w-zone-198b r-zone-198b f-zone-198b
-;  m-zone-199b t-zone-199b w-zone-199b r-zone-199b f-zone-199b
-;  m-zone-200b t-zone-200b w-zone-200b r-zone-200b f-zone-200b
-;  m-zone-201b t-zone-201b w-zone-201b r-zone-201b f-zone-201b
-;  m-zone-202b t-zone-202b w-zone-202b r-zone-202b f-zone-202b
-;  m-zone-203b t-zone-203b w-zone-203b r-zone-203b f-zone-203b
-;  m-zone-204b t-zone-204b w-zone-204b r-zone-204b f-zone-204b
-;  m-zone-205b t-zone-205b w-zone-205b r-zone-205b f-zone-205b
-;  m-zone-206b t-zone-206b w-zone-206b r-zone-206b f-zone-206b
-;  m-zone-207b t-zone-207b w-zone-207b r-zone-207b f-zone-207b
-;  m-zone-208b t-zone-208b w-zone-208b r-zone-208b f-zone-208b
-;  m-zone-209b t-zone-209b w-zone-209b r-zone-209b f-zone-209b
-;  m-zone-210b t-zone-210b w-zone-210b r-zone-210b f-zone-210b
-;  m-zone-211b t-zone-211b w-zone-211b r-zone-211b f-zone-211b
-;  m-zone-212b t-zone-212b w-zone-212b r-zone-212b f-zone-212b
-;  m-zone-213b t-zone-213b w-zone-213b r-zone-213b f-zone-213b
-;  m-zone-214b t-zone-214b w-zone-214b r-zone-214b f-zone-214b
-;  m-zone-215b t-zone-215b w-zone-215b r-zone-215b f-zone-215b
-;  m-zone-216b t-zone-216b w-zone-216b r-zone-216b f-zone-216b
-;  m-zone-217b t-zone-217b w-zone-217b r-zone-217b f-zone-217b
-;  m-zone-218b t-zone-218b w-zone-218b r-zone-218b f-zone-218b
-;  m-zone-219b t-zone-219b w-zone-219b r-zone-219b f-zone-219b
-;  m-zone-220b t-zone-220b w-zone-220b r-zone-220b f-zone-220b
-;  m-zone-221b t-zone-221b w-zone-221b r-zone-221b f-zone-221b
-;
-;  m-zone-0e t-zone-0e w-zone-0e r-zone-0e f-zone-0e
-;  m-zone-3e t-zone-3e w-zone-3e r-zone-3e f-zone-3e
-;  m-zone-4e t-zone-4e w-zone-4e r-zone-4e f-zone-4e
-;  m-zone-20e t-zone-20e w-zone-20e r-zone-20e f-zone-20e
-;  m-zone-26e t-zone-26e w-zone-26e r-zone-26e f-zone-26e
-;  m-zone-29e t-zone-29e w-zone-29e r-zone-29e f-zone-29e
-;  m-zone-30e t-zone-30e w-zone-30e r-zone-30e f-zone-30e
-;  m-zone-31e t-zone-31e w-zone-31e r-zone-31e f-zone-31e
-;  m-zone-38e t-zone-38e w-zone-38e r-zone-38e f-zone-38e
-;  m-zone-78e t-zone-78e w-zone-78e r-zone-78e f-zone-78e
-;  m-zone-116e t-zone-116e w-zone-116e r-zone-116e f-zone-116e
-;  m-zone-134e t-zone-134e w-zone-134e r-zone-134e f-zone-134e
-;  m-zone-166e t-zone-166e w-zone-166e r-zone-166e f-zone-166e
-;  m-zone-186e t-zone-186e w-zone-186e r-zone-186e f-zone-186e
-;  m-zone-187e t-zone-187e w-zone-187e r-zone-187e f-zone-187e
-;  m-zone-188e t-zone-188e w-zone-188e r-zone-188e f-zone-188e
-;  m-zone-190e t-zone-190e w-zone-190e r-zone-190e f-zone-190e
-;  m-zone-191e t-zone-191e w-zone-191e r-zone-191e f-zone-191e
-;  m-zone-193e t-zone-193e w-zone-193e r-zone-193e f-zone-193e
-;  m-zone-194e t-zone-194e w-zone-194e r-zone-194e f-zone-194e
-;  m-zone-195e t-zone-195e w-zone-195e r-zone-195e f-zone-195e
-;  m-zone-196e t-zone-196e w-zone-196e r-zone-196e f-zone-196e
-;  m-zone-197e t-zone-197e w-zone-197e r-zone-197e f-zone-197e
-;  m-zone-198e t-zone-198e w-zone-198e r-zone-198e f-zone-198e
-;  m-zone-199e t-zone-199e w-zone-199e r-zone-199e f-zone-199e
-;  m-zone-200e t-zone-200e w-zone-200e r-zone-200e f-zone-200e
-;  m-zone-201e t-zone-201e w-zone-201e r-zone-201e f-zone-201e
-;  m-zone-202e t-zone-202e w-zone-202e r-zone-202e f-zone-202e
-;  m-zone-203e t-zone-203e w-zone-203e r-zone-203e f-zone-203e
-;  m-zone-204e t-zone-204e w-zone-204e r-zone-204e f-zone-204e
-;  m-zone-205e t-zone-205e w-zone-205e r-zone-205e f-zone-205e
-;  m-zone-206e t-zone-206e w-zone-206e r-zone-206e f-zone-206e
-;  m-zone-207e t-zone-207e w-zone-207e r-zone-207e f-zone-207e
-;  m-zone-208e t-zone-208e w-zone-208e r-zone-208e f-zone-208e
-;  m-zone-209e t-zone-209e w-zone-209e r-zone-209e f-zone-209e
-;  m-zone-210e t-zone-210e w-zone-210e r-zone-210e f-zone-210e
-;  m-zone-211e t-zone-211e w-zone-211e r-zone-211e f-zone-211e
-;  m-zone-212e t-zone-212e w-zone-212e r-zone-212e f-zone-212e
-;  m-zone-213e t-zone-213e w-zone-213e r-zone-213e f-zone-213e
-;  m-zone-214e t-zone-214e w-zone-214e r-zone-214e f-zone-214e
-;  m-zone-215e t-zone-215e w-zone-215e r-zone-215e f-zone-215e
-;  m-zone-216e t-zone-216e w-zone-216e r-zone-216e f-zone-216e
-;  m-zone-217e t-zone-217e w-zone-217e r-zone-217e f-zone-217e
-;  m-zone-218e t-zone-218e w-zone-218e r-zone-218e f-zone-218e
-;  m-zone-219e t-zone-219e w-zone-219e r-zone-219e f-zone-219e
-;  m-zone-220e t-zone-220e w-zone-220e r-zone-220e f-zone-220e
-;  m-zone-221e t-zone-221e w-zone-221e r-zone-221e f-zone-221e
 ]
 
 breed [ zones a-zone] ; node agents classified as zone objects
@@ -2450,8 +2354,8 @@ breed [ listeria a-listeria] ; listeria agents
 directed-link-breed [contact-links contact-link]
 undirected-link-breed [proximity-links proximity-link]
 
-zones-own
-[ z-category ; zone classification of either 1, 2, 3, 4
+zones-own [
+  z-category ; zone classification of either 1, 2, 3, 4
   z-item-name ; what is the site name
   z-height ;distance from the floor
   z-area ; surface area in sq. cm
@@ -2484,8 +2388,8 @@ zones-own
   z-conc-list
 ]
 
-patches-own
-[ p-water           ; the amount of water/sanitizer on this patch
+patches-own [
+  p-water           ; the amount of water/sanitizer on this patch
   p-listeria ;number of listeria present at patch
   p-listeria-concentration  ; concentration of listeria present at patch/625cm^2
   p-traffic ;assigned traffic level from traffic map
@@ -2533,7 +2437,7 @@ to setup
     setup-environment
     import-matrices
     setup-submodel-params
-    ask links [ set color black set thickness 0.2 ]
+    ask links [set color black set thickness 0.2]
     create-listeria round ((initial-zone-prevalence / 100) * count zones) [
       listeria-setup
       listeria-initial-zone-placement
@@ -3643,18 +3547,23 @@ to setup-randomEvents ; make a list of ticks at which random events will occur
 end
 
 to create-output-files ; these output files are written to collect data when running a single iteration - mainly for testing purposes, they are not utilized in simulation experiments
-  if (file-exists? "TimeSeriesZoneConcen.csv" ) ;;will refer to as File 1
-    [ carefully [file-delete "TimeSeriesZoneConcen.csv" ] [ ] ]
-  if (file-exists? "TimeSeriesZoneCont.csv" ) ;;will refer to as File 1
-    [ carefully [file-delete "TimeSeriesZoneCont.csv" ] [ ] ]
-  if (file-exists? "ZoneData.csv" ) ;;will refer to as File 2
-    [ carefully [file-delete "ZoneData.csv" ] [ ] ]
+  if (file-exists? "TimeSeriesZoneConcen.csv" ) [;;will refer to as File 1
+    carefully [file-delete "TimeSeriesZoneConcen.csv" ] [ ]
+  ]
+  if (file-exists? "TimeSeriesZoneCont.csv" ) [;;will refer to as File 1
+    carefully [file-delete "TimeSeriesZoneCont.csv" ] [ ]
+  ]
+  if (file-exists? "ZoneData.csv" ) [;;will refer to as File 2
+    carefully [file-delete "ZoneData.csv" ] [ ]
+  ]
 
   let headings-file-1 [ "hours" ] ;making col header of file "TimeSeriesZoneConcen.csv"
   let zone-item [ "," ]
-  foreach sort-on [who] zones ; builds the other col headings by using who number
-      [ [?1] -> ask ?1 [ set headings-file-1 lput who headings-file-1
-        set zone-item lput z-item-name zone-item ] ]
+  foreach sort-on [who] zones [; builds the other col headings by using who number
+    [?1] -> ask ?1 [ set headings-file-1 lput who headings-file-1
+      set zone-item lput z-item-name zone-item
+    ]
+  ]
   ;print headings-file-1
 
   file-open "TimeSeriesZoneConcen.csv"
@@ -3666,9 +3575,12 @@ to create-output-files ; these output files are written to collect data when run
 
   set headings-file-1 [ "hours" ] ;making col header of file "TimeSeriesZoneCont.csv"
   set zone-item [ "," ]
-  foreach sort-on [who] zones ; builds the other col headings by using who number
-      [ [?1] -> ask ?1 [ set headings-file-1 lput who headings-file-1
-        set zone-item lput z-item-name zone-item ] ]
+  foreach sort-on [who] zones [; builds the other col headings by using who number
+    [?1] -> ask ?1 [
+      set headings-file-1 lput who headings-file-1
+      set zone-item lput z-item-name zone-item
+    ]
+  ]
   ;print headings-file-1
 
   file-open "TimeSeriesZoneCont.csv"
@@ -4002,8 +3914,16 @@ to setup-submodel-params ; here are all of the global parameter values that need
 end
 
 to reset-lists
-  set concentration-list [] set time-contaminated-list [] set max-contam-bout-list [] set contacts-list [] set transfers-list []
-  set temp-niche-list [] set niches-estab-list [] set food-cont-list [] set zone4-cont-list [] set random-cont-list []
+  set concentration-list []
+  set time-contaminated-list []
+  set max-contam-bout-list []
+  set contacts-list []
+  set transfers-list []
+  set temp-niche-list []
+  set niches-estab-list []
+  set food-cont-list []
+  set zone4-cont-list []
+  set random-cont-list []
 end
 
 to setup-transfer-params ; reads in transfer matrices from .csv files - don't change these
@@ -4184,8 +4104,7 @@ to import-attributes ; this creates agents with their individual characteristics
   ; item_name xcor ycor z-category z-height z-area z-cleanable? z-location z-machine
   let i 1
   ;  while [i <= 261] ; change this number to match the number of rows in your excel file
-  while [not file-at-end?]
-  [
+  while [not file-at-end?] [
     let items split file-read-line "\t"
     let itemsA (list
       item 0 items
@@ -4231,10 +4150,11 @@ to import-directed-links ; sets up directed links
   file-close-all
   ; create excel file with 2 columns of agent who numbers, directed link will be made from who in col 1 to who in col 2
   file-open "dlinks.txt" ; save excel file as .txt and use name here
-  while [not file-at-end?]
-  [let items read-from-string (word "[" file-read-line "]")
-    ask get-node (item 0 items)
-    [create-contact-link-to get-node (item 1 items)]  ;directed links
+  while [not file-at-end?] [
+    let items read-from-string (word "[" file-read-line "]")
+    ask get-node (item 0 items) [
+      create-contact-link-to get-node (item 1 items)  ;directed links
+    ]
   ]
   file-close
 end
@@ -4264,20 +4184,26 @@ to import-undirected-links ; sets up undirected links
       file-open "links.txt"
     ]
   )
-  while [not file-at-end?]
-  [ let items read-from-string (word "[" file-read-line "]")
-    ask get-node (item 0 items)
-    [create-proximity-link-with get-node (item 1 items)] ;undirected links
+  while [not file-at-end?] [
+    let items read-from-string (word "[" file-read-line "]")
+    ask get-node (item 0 items) [
+      create-proximity-link-with get-node (item 1 items) ;undirected links
+    ]
   ]
   file-close
 end
 
 to-report split [ string delim ]
   report reduce [ [?1 ?2] ->
-    ifelse-value (?2 = delim)
-    [ lput "" ?1 ]
-    [ lput word last ?1 ?2 but-last ?1 ]
-  ] fput [""] n-values (length string) [ [?1] -> substring string ?1 (?1 + 1) ]
+    ifelse-value (?2 = delim) [
+      lput "" ?1
+    ] [
+      lput word last ?1 ?2 but-last ?1
+    ]
+  ]
+  fput [""] n-values (length string) [
+    [?1] -> substring string ?1 (?1 + 1)
+  ]
 end
 
 to-report get-node [id]
@@ -4287,17 +4213,34 @@ end
 to zones-setup ; sets shape and color of agents depending on zone category
   set z-listeria-concentration 0
   set z-listeria 0
-  set z-water one-of [ 1 2 3]
-  if z-category = 1
-    [ set shape "circle" set size 1 set color (16 - z-water)]
-  if z-category = 2
-    [ set shape "triangle" set size 1 set color (26 - z-water)]
-  if z-category = 3
-    [ set shape "pentagon" set size 1 set color (126 - z-water)]
-  if z-item-name = "employee"
-    [ set shape "person" set size 3 set color black set hidden? true]
-  if z-item-name = "forklift"
-    [ set shape "car" set size 3 set color black set hidden? true]
+  set z-water one-of [1 2 3]
+  if z-category = 1 [
+    set shape "circle"
+    set size 1
+    set color (16 - z-water)
+  ]
+  if z-category = 2 [
+    set shape "triangle"
+    set size 1
+    set color (26 - z-water)
+  ]
+  if z-category = 3 [
+    set shape "pentagon"
+    set size 1
+    set color (126 - z-water)
+  ]
+  if z-item-name = "employee" [
+    set shape "person"
+    set size 3
+    set color black
+    set hidden? true
+  ]
+  if z-item-name = "forklift" [
+    set shape "car"
+    set size 3
+    set color black
+    set hidden? true
+  ]
   set z-resample? false
   set z-sampled? false
   set z-out-links count my-out-contact-links
@@ -4309,33 +4252,40 @@ to setup-environment ; set inital conditions and characteristics of patches
   update-water ( "no" )
   update-traffic ( "no" )
   run environment-view
-  ask patches with [p-water != 0]
-    [set p-listeria-concentration 0 set p-listeria 0
-      set c-listeria-concentration 0  set c-listeria 0
-      set c-height 2000
-      set p-area 2500
-      set p-cleanable? true
+  ask patches with [p-water != 0] [
+    set p-listeria-concentration 0
+    set p-listeria 0
+    set c-listeria-concentration 0
+    set c-listeria 0
+    set c-height 2000
+    set p-area 2500
+    set p-cleanable? true
   ]
-  ask patches with [p-water = 35]
-      [set pcolor brown
-        set p-cleanable? false
-        set p-item-name "floor-wall-juncture"]
-  ;ask patches with [(pxcor > 39 and pxcor < 58) and (pycor > 2 and pycor < 40)] ;;check where is mezzanine
-  ;  [ set m-height 12          ;height of mezzanine (12 ft)
-  ;    set m-traffic 1
-  ;    set m-floor-listeria 0 set m-floor-listeria-concentration 0
-  ;    set m-ceiling-listeria 0 set m-ceiling-listeria-concentration 0 ]
+  ask patches with [p-water = 35] [
+    set pcolor brown
+    set p-cleanable? false
+    set p-item-name "floor-wall-juncture"
+  ]
+;  ask patches with [(pxcor > 39 and pxcor < 58) and (pycor > 2 and pycor < 40)] [;;check where is mezzanine
+;    set m-height 12          ;height of mezzanine (12 ft)
+;    set m-traffic 1
+;    set m-floor-listeria 0
+;    set m-floor-listeria-concentration 0
+;    set m-ceiling-listeria 0
+;    set m-ceiling-listeria-concentration 0
+;  ]
 end
 
 to update-water [level] ; reads in different water maps (if applicable) - change name of file and add other levels if needed (i.e., "high")
-
   if level = "high" [
     file-open "water-high.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-water file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-water file-read
+        ]
+      ]
+    ]
     file-close
     ;  ask patches with [m-height > 0]
     ;    [set m-water one-of [1 2 3]]
@@ -4344,10 +4294,12 @@ to update-water [level] ; reads in different water maps (if applicable) - change
   if level = "low" [
     file-open "water-medium.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-water file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-water file-read
+        ]
+      ]
+    ]
     file-close
     ;  ask patches with [m-height > 0]
     ;    [set m-water one-of [1 2 3]]
@@ -4357,10 +4309,12 @@ to update-water [level] ; reads in different water maps (if applicable) - change
     file-open "water-none.txt"
     ;read in the floor plan
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-water file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-water file-read
+        ]
+      ]
+    ]
     file-close
   ]
   water
@@ -4368,7 +4322,7 @@ end
 
 ;;environment-view switch requires the two following functions:
 to water
-  ask patches[ p-water-recolor]
+  ask patches [p-water-recolor]
 end
 
 to traffic
@@ -4379,40 +4333,48 @@ to update-traffic [level] ; reads in different traffic maps (if applicable) - ch
   if level = "high" [
     file-open "traffic-high.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-traffic file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-traffic file-read
+        ]
+      ]
+    ]
     file-close
   ]
 
   if level = "low" [
     file-open "traffic-low.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-traffic file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-traffic file-read
+        ]
+      ]
+    ]
     file-close
   ]
 
   if level = "no" [
     file-open "traffic-none.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-traffic file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-traffic file-read
+        ]
+      ]
+    ]
     file-close
   ]
 
   if level = "production" [
     file-open "traffic-production-tray-mode.txt"
     while [not file-at-end?] [
-      foreach sort patches [ [?1] ->
-        ask ?1 [
-          set p-traffic file-read]
-    ]]
+      foreach sort patches [
+        [?1] -> ask ?1 [
+          set p-traffic file-read
+        ]
+      ]
+    ]
     file-close
   ]
   traffic
@@ -4448,16 +4410,23 @@ to listeria-initial-zone-placement
   let choice one-of zones with [ z-listeria = 0 ]
   if choice != nobody [move-to choice
     ;  ask choice [ set z-listeria-concentration (load) set z-listeria (z-listeria-concentration * [z-area] of self)]]
-    ask choice [ set z-listeria (load) set z-listeria-concentration (z-listeria / [z-area] of self)]]
+    ask choice [
+      set z-listeria (load)
+      set z-listeria-concentration (z-listeria / [z-area] of self)
+    ]
+  ]
 end
 
 to listeria-initial-environment-placement
   ;  let load (10 ^ initial-contamination-level)
   let load (initial-contamination-level);RI corrected
-  let choice one-of patches with [ (p-listeria = 0) and (pcolor != black)]
+  let choice one-of patches with [(p-listeria = 0) and (pcolor != black)]
   move-to choice
   ;  ask choice [ set p-listeria-concentration (load) set p-listeria (p-listeria-concentration * [p-area] of self)]
-  ask choice [ set p-listeria (load) set p-listeria-concentration (p-listeria-concentration / [p-area] of self)]
+  ask choice [
+    set p-listeria (load)
+    set p-listeria-concentration (p-listeria-concentration / [p-area] of self)
+  ]
 end
 
 to listeria-initial-dirty-agent
@@ -4620,8 +4589,8 @@ to go
   ]
   let stop-hour 167 + (24 * (time-of-simulation - 1) * 7)
   if ticks = start-hour [ set-initial-values set collect-data? true ]
-  if ticks = stop-hour
-  [ set total-contam-events (zone-to-zone + zone-to-patch + condensation-drip + introduction-zone4 + introduction-food + random-event + employee-fcs + nfcs-fcs )
+  if ticks = stop-hour [
+    set total-contam-events (zone-to-zone + zone-to-patch + condensation-drip + introduction-zone4 + introduction-food + random-event + employee-fcs + nfcs-fcs )
     set median-z1-time median [z-time-contaminated] of zones with [z-category = 1]
     set median-z2-time median [z-time-contaminated] of zones with [z-category = 2]
     set median-z3-time median [z-time-contaminated] of zones with [z-category = 3]
@@ -4629,20 +4598,27 @@ to go
     set median-p-time median [p-time-contaminated] of patches with [p-water != 0]
     set median-fwj-time median [p-time-contaminated] of patches with [p-water = 35]
     set median-d-time median [p-time-contaminated] of patches with [p-water = 5 or p-water = 6]
-    if any? zones with [z-category = 1 and z-max-contam-bout != 0]
-      [set median-z1-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 1 and z-max-contam-bout != 0]]
+    if any? zones with [z-category = 1 and z-max-contam-bout != 0] [
+      set median-z1-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 1 and z-max-contam-bout != 0]
+    ]
     if any? zones with [z-category = 2 and z-max-contam-bout != 0]
-      [set median-z2-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 2 and z-max-contam-bout != 0]]
-    if any? zones with [z-category = 3 and z-max-contam-bout != 0]
-      [set median-z3-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 3 and z-max-contam-bout != 0]]
-    if any? zones with [z-item-name = "employee" and z-max-contam-bout != 0]
-      [set median-e-max-contam-bout median [z-max-contam-bout] of zones with [z-item-name = "employee" and z-max-contam-bout != 0]]
-    if any? patches with [p-water != 0 and p-max-contam-bout != 0]
-      [set median-p-max-contam-bout median [p-max-contam-bout] of patches with [p-water != 0 and p-max-contam-bout != 0]]
-    if any? patches with [p-water = 35 and p-max-contam-bout != 0]
-      [set median-fwj-max-contam-bout median [p-max-contam-bout] of patches with [p-water = 35 and p-max-contam-bout != 0]]
-    if any? patches with [(p-water = 5 and p-max-contam-bout != 0) or (p-water = 6 and p-max-contam-bout != 0)]
-      [set median-d-max-contam-bout median [p-max-contam-bout] of patches with [(p-water = 5 and p-max-contam-bout != 0) or (p-water = 6 and p-max-contam-bout != 0)]]
+      [set median-z2-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 2 and z-max-contam-bout != 0]
+    ]
+    if any? zones with [z-category = 3 and z-max-contam-bout != 0] [
+      set median-z3-max-contam-bout median [z-max-contam-bout] of zones with [z-category = 3 and z-max-contam-bout != 0]
+    ]
+    if any? zones with [z-item-name = "employee" and z-max-contam-bout != 0] [
+      set median-e-max-contam-bout median [z-max-contam-bout] of zones with [z-item-name = "employee" and z-max-contam-bout != 0]
+    ]
+    if any? patches with [p-water != 0 and p-max-contam-bout != 0] [
+      set median-p-max-contam-bout median [p-max-contam-bout] of patches with [p-water != 0 and p-max-contam-bout != 0]
+    ]
+    if any? patches with [p-water = 35 and p-max-contam-bout != 0] [
+      set median-fwj-max-contam-bout median [p-max-contam-bout] of patches with [p-water = 35 and p-max-contam-bout != 0]
+    ]
+    if any? patches with [(p-water = 5 and p-max-contam-bout != 0) or (p-water = 6 and p-max-contam-bout != 0)] [
+      set median-d-max-contam-bout median [p-max-contam-bout] of patches with [(p-water = 5 and p-max-contam-bout != 0) or (p-water = 6 and p-max-contam-bout != 0)]
+    ]
     set z1-contacts mean [z-contacts] of zones with [z-category = 1] set z1-transfers mean [z-transfers] of zones with [z-category = 1]
     set z2-contacts mean [z-contacts] of zones with [z-category = 2] set z2-transfers mean [z-transfers] of zones with [z-category = 2]
     set z3-contacts mean [z-contacts] of zones with [z-category = 3] set z3-transfers mean [z-transfers] of zones with [z-category = 3]
@@ -4725,7 +4701,7 @@ to set-initial-values
   set z3 (count zones with [z-category = 3 and z-listeria > 1]) / (count zones with [z-category = 3])
   set floors (count patches with [pcolor != 0 and p-listeria > 1]) / (count patches with [pcolor != 0])
   set es (count zones with [z-item-name = "employee" and z-listeria > 1]) / (count zones with [z-category = 1])
-  set zones-initial ((count zones with [z-listeria > 1]) / count zones ) * 100
+  set zones-initial ((count zones with [z-listeria > 1]) / count zones) * 100
   set z1-initial z1 * 100
   set z2-initial  z2 * 100
   set z3-initial z3 * 100
@@ -4735,16 +4711,17 @@ end
 
 to increment-contam-time
   ask zones with [z-listeria = 0 and z-contam-counter != 0] [set z-contam-counter 0]
-  ask zones with [z-listeria > 0]
-  [ set z-time-contaminated z-time-contaminated + 1
+  ask zones with [z-listeria > 0] [
+    set z-time-contaminated z-time-contaminated + 1
     set z-contam-counter z-contam-counter + 1
-    set z-max-contam-bout max( list z-contam-counter z-max-contam-bout) ]
-
+    set z-max-contam-bout max(list z-contam-counter z-max-contam-bout)
+  ]
   ask patches with [p-listeria = 0 and p-contam-counter != 0] [set p-contam-counter 0]
-  ask patches with [p-listeria > 0]
-  [ set p-time-contaminated p-time-contaminated + 1
+  ask patches with [p-listeria > 0] [
+    set p-time-contaminated p-time-contaminated + 1
     set p-contam-counter p-contam-counter + 1
-    set p-max-contam-bout max( list p-contam-counter p-max-contam-bout) ]
+    set p-max-contam-bout max( list p-contam-counter p-max-contam-bout)
+  ]
 end
 
 to set-production-schedule
@@ -4752,7 +4729,8 @@ to set-production-schedule
     ;write-output 3
     set week (week + 1)
     set production-schedule sunday
-    reset-week]
+    reset-week
+  ]
   if ticks mod 168 = 24 [
     set production-schedule monday
   ]
@@ -4775,16 +4753,27 @@ to set-production-schedule
 end
 
 to reset-day
-  set empty-time 0  set production-time 0
-  ;  set daily-samples 0 set z-sample-prev 0
-    set clean-time 0
+  set empty-time 0
+  set production-time 0
+  ; set daily-samples 0
+  ; set z-sample-prev 0
+  set clean-time 0
 end
 
 to reset-week
   set day 1
-  ;  set zone-to-zone 0 set zone-to-patch 0 set avg-listeria-transferred 0 set patch-to-patch 0
-  ;  set condensation-drip 0 set introduction-zone4 0  set introduction-food 0
-  ;  set random-event 0 set employee-fcs 0  set nfcs-fcs 0 set sum-food-load 0 set sum-food-transfer 0
+;  set zone-to-zone 0
+;  set zone-to-patch 0
+;  set avg-listeria-transferred 0
+;  set patch-to-patch 0
+;  set condensation-drip 0
+;  set introduction-zone4 0
+;  set introduction-food 0
+;  set random-event 0
+;  set employee-fcs 0
+;  set nfcs-fcs 0
+;  set sum-food-load 0
+;  set sum-food-transfer 0
   set-sampling ; uncomment if testing sampling
 end
 
@@ -6231,7 +6220,8 @@ to run-event ; here is where you need to bring everything together based on prod
     ;    write-output 2
     ask n-of 2 employees [ ; how many employees are in the room for pre-op? - change 5 to whatever is appropriate
       set hidden? false
-      ask my-proximity-links [set hidden? false]]
+      ask my-proximity-links [set hidden? false]
+    ]
     ask forklifts [
       set hidden? true
       ask my-proximity-links [set hidden? true]
@@ -6250,10 +6240,12 @@ to run-event ; here is where you need to bring everything together based on prod
   if event = "production" [
     ask forklifts [
       set hidden? false
-      ask my-proximity-links [set hidden? false]]
+      ask my-proximity-links [set hidden? false]
+    ]
     ask n-of (random-in-range 13 13) employees [ ; how many employees are in the room during production? - change 14 18 to whatever range is appropriate
       set hidden? false
-      ask my-proximity-links [set hidden? false]]
+      ask my-proximity-links [set hidden? false]
+    ]
     ;      if production-time = 0 [update-water ("low")] ; update water level at start of production if applicable
     ;      if production-time = 4 [update-water ("low")] ; update water level at mid production if applicable
     ;      if production-time = 8 or production-time > 17 [update-traffic ("high") ] ; update traffic level at shift change?
@@ -6627,7 +6619,7 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set p-mid ((count patches with [pcolor != 0 and p-listeria > 0 ]) / count patches with [pcolor != 0])  * 100
     set e-mid ((count zones with [z-item-name = "employee" and z-listeria > 0 ]) / count zones with [z-item-name = "employee"]) * 100
     ;    set crack 0 ask patches with [ (pxcor > 16 and pxcor < 23) and (pycor > 28 and pycor < 36)] [if p-listeria > 0 [set crack 1]]
-    set crack 0 ask patches with [ (pxcor > 117 and pxcor < 36) and (pycor > 28 and pycor < 36)] [if p-listeria > 0 [set crack 1]]
+    set crack 0 ask patches with [(pxcor > 117 and pxcor < 36) and (pycor > 28 and pycor < 36)] [if p-listeria > 0 [set crack 1]]
   ]
   ;  if (event = "production" and production-time = 16) [
   if (event = "production" and production-time = 5) [
@@ -6889,7 +6881,6 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set m-z1-beg z1-beg set m-z2-beg z2-beg set m-p-beg p-beg set m-e-beg e-beg set m-z3-beg z3-beg
     set m-z1-mid z1-mid set m-z2-mid z2-mid set m-p-mid p-mid set m-e-mid e-mid set m-z3-mid z3-mid
     set m-z1-post z1-post set m-z2-post z2-post set m-p-post p-post set m-e-post e-post set m-z3-post z3-post
-    ;    set m-crack-preop crack]
   ]
   if day = 3 [
     set t-z-sample-prev z-sample-prev set t-zones-pre zones-pre-prev set t-zones-beg zones-beg-prev set t-zones-post zones-post-prev set t-zones-mid zones-mid-prev
@@ -6897,8 +6888,6 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set t-z1-beg z1-beg set t-z2-beg z2-beg set t-p-beg p-beg set t-e-beg e-beg set t-z3-beg z3-beg
     set t-z1-mid z1-mid set t-z2-mid z2-mid set t-p-mid p-mid set t-e-mid e-mid set t-z3-mid z3-mid
     set t-z1-post z1-post set t-z2-post z2-post set t-p-post p-post set t-e-post e-post set t-z3-post z3-post
-    ;    if t-clean-room != 1 [ set t-clean-room clean-room ]
-    ;    if t-agent0 != 1 [set t-agent0 agent0] if t-agent1 != 1 [set t-agent1 agent1]]
   ]
   if day = 4 [
     set w-z-sample-prev z-sample-prev set w-zones-pre zones-pre-prev set w-zones-beg zones-beg-prev set w-zones-post zones-post-prev set w-zones-mid zones-mid-prev
@@ -6906,7 +6895,6 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set w-z1-beg z1-beg set w-z2-beg z2-beg set w-p-beg p-beg set w-e-beg e-beg set w-z3-beg z3-beg
     set w-z1-mid z1-mid set w-z2-mid z2-mid set w-p-mid p-mid set w-e-mid e-mid set w-z3-mid z3-mid
     set w-z1-post z1-post set w-z2-post z2-post set w-p-post p-post set w-e-post e-post set w-z3-post z3-post
-    ;    set w-crack crack set w-catch-guide catch-guide]
   ]
   if day = 5 [
     set r-z-sample-prev z-sample-prev set r-zones-pre zones-pre-prev set r-zones-beg zones-beg-prev set r-zones-post zones-post-prev set r-zones-mid zones-mid-prev
@@ -6914,7 +6902,6 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set r-z1-beg z1-beg set r-z2-beg z2-beg set r-p-beg p-beg set r-e-beg e-beg set r-z3-beg z3-beg
     set r-z1-mid z1-mid set r-z2-mid z2-mid set r-p-mid p-mid set r-e-mid e-mid set r-z3-mid z3-mid
     set r-z1-post z1-post set r-z2-post z2-post set r-p-post p-post set r-e-post e-post set r-z3-post z3-post
-    ;    if r-drydock-patches != 1 [set r-drydock-patches dry-dock]]
   ]
   if day = 6 [
     set f-z-sample-prev z-sample-prev set f-zones-pre zones-pre-prev set f-zones-beg zones-beg-prev set f-zones-post zones-post-prev set f-zones-mid zones-mid-prev
@@ -6922,7 +6909,6 @@ to collect-data ; this is where you need to collect data for global outputs defi
     set f-z1-beg z1-beg set f-z2-beg z2-beg set f-p-beg p-beg set f-e-beg e-beg set f-z3-beg z3-beg
     set f-z1-mid z1-mid set f-z2-mid z2-mid set f-p-mid p-mid set f-e-mid e-mid set f-z3-mid z3-mid
     set f-z1-post z1-post set f-z2-post z2-post set f-p-post p-post set f-e-post e-post set f-z3-post z3-post
-    ;    set f-Sarah-floor sarah-floor]
   ]
 end
 
@@ -6932,9 +6918,11 @@ to write-output [file-number]
     ;OUTPUT FILE #1 DATA
     let zone-data [  ] ; defines an empty list each tick (as a local var.) that holds concentration for each zone
     set zone-data fput ticks zone-data
-    foreach sort-on [ who ] zones
-    [ [?1] -> ask ?1
-      [ set zone-data lput z-listeria-concentration zone-data ] ]
+    foreach sort-on [ who ] zones [
+      [?1] -> ask ?1 [
+        set zone-data lput z-listeria-concentration zone-data
+      ]
+    ]
     file-open  "TimeSeriesZoneConcen.csv"
     let data-to-csv csv:to-row zone-data
     file-print data-to-csv
@@ -6942,9 +6930,11 @@ to write-output [file-number]
 
     let cont-data [  ] ; defines an empty list each tick (as a local var.) that holds concentration for each zone
     set cont-data fput ticks cont-data
-    foreach sort-on [ who ] zones
-    [ [?1] -> ask ?1
-      [ set cont-data lput z-time-contaminated cont-data ] ]
+    foreach sort-on [ who ] zones [
+      [?1] -> ask ?1 [
+        set cont-data lput z-time-contaminated cont-data
+      ]
+    ]
     file-open  "TimeSeriesZoneCont.csv"
     set data-to-csv csv:to-row cont-data
     file-print data-to-csv
@@ -6969,20 +6959,22 @@ end
 ; Verhulst discrete growth function for nodes and patches - don't need to change
 ; only growth when water is present (2 or 3) and same growth rate
 to grow
-  ask zones with [  (z-water > 1 and z-water <= 3) ]
-    [let N (z-listeria-concentration)
-      set z-listeria-concentration ( ( K * N * e ^ mu-max)/ (K + N * ((e ^ mu-max) - 1 )))
-      set z-listeria round (z-listeria-concentration * [z-area] of self)]
+  ask zones with [(z-water > 1 and z-water <= 3)] [
+    let N (z-listeria-concentration)
+    set z-listeria-concentration ( ( K * N * e ^ mu-max)/ (K + N * ((e ^ mu-max) - 1 )))
+    set z-listeria round (z-listeria-concentration * [z-area] of self)]
 
-  ask patches with [ (p-water > 1 and p-water <= 3)]
-    [let Np (p-listeria-concentration)
-      set p-listeria-concentration ( ( K * Np * e ^ mu-max)/ (K + Np * ((e ^ mu-max) - 1 )))
-      set p-listeria round (p-listeria-concentration * [p-area] of self)]
+  ask patches with [(p-water > 1 and p-water <= 3)] [
+    let Np (p-listeria-concentration)
+    set p-listeria-concentration ( ( K * Np * e ^ mu-max)/ (K + Np * ((e ^ mu-max) - 1 )))
+    set p-listeria round (p-listeria-concentration * [p-area] of self)
+  ]
 
-  ask patches with [ (c-water > 1 and c-water <= 3)]
-    [let Nc (c-listeria-concentration)
-      set c-listeria-concentration ( ( K * Nc * e ^ mu-max)/ (K + Nc * ((e ^ mu-max) - 1 )))
-      set c-listeria round (c-listeria-concentration * [p-area] of self)]
+  ask patches with [(c-water > 1 and c-water <= 3)] [
+    let Nc (c-listeria-concentration)
+    set c-listeria-concentration ( ( K * Nc * e ^ mu-max)/ (K + Nc * ((e ^ mu-max) - 1 )))
+    set c-listeria round (c-listeria-concentration * [p-area] of self)
+  ]
 
   ;  ask patches with [ (m-water > 1 and m-water <= 3)]
   ;    [let Nm (m-floor-listeria-concentration)
@@ -6991,25 +6983,38 @@ to grow
 end
 
 to update-niche
-  ask zones with [not z-cleanable?]
-  [if z-listeria = 0
-    [ if z-niches-established = 0 [set z-time-to-niche z-time-to-niche + 1
-      set z-niche-length 0]]
-    if z-listeria > 0
-    [ set z-niche-length z-niche-length + 1]]
+  ask zones with [not z-cleanable?] [
+    if z-listeria = 0 [
+      if z-niches-established = 0 [set z-time-to-niche z-time-to-niche + 1
+      set z-niche-length 0
+      ]
+    ]
+    if z-listeria > 0 [
+      set z-niche-length z-niche-length + 1
+    ]
+  ]
 end
 
 to dry-water
-  ask zones with [z-water > 1 and z-water <= 3]
-    [set z-water (z-water - 0.2)]
-  ask zones with [(z-water = 4) and z-cleanable?] [set z-water 1]
-  ask zones with [(z-water = 4) and not z-cleanable?] [set z-water 3]
+  ask zones with [z-water > 1 and z-water <= 3] [
+    set z-water (z-water - 0.2)
+  ]
+  ask zones with [(z-water = 4) and z-cleanable?] [
+    set z-water 1
+  ]
+  ask zones with [(z-water = 4) and not z-cleanable?] [
+    set z-water 3
+  ]
 
-  ask patches with [(p-water > 1) and (p-water <= 3)]
-    [set p-water (p-water - 0.2)]
-  ask patches with [p-water = 4] [set p-water 1 ]
-  ask patches with [c-water > 1 and c-water <= 3]
-    [set c-water (c-water - 0.2)]
+  ask patches with [(p-water > 1) and (p-water <= 3)] [
+      set p-water (p-water - 0.2)
+  ]
+  ask patches with [p-water = 4] [
+    set p-water 1
+  ]
+  ask patches with [c-water > 1 and c-water <= 3] [
+    set c-water (c-water - 0.2)
+  ]
   ;  ask patches with [m-water > 1 and m-height > 0]
   ;    [set m-water (m-water - 0.2)]
   if event = "production" [ask zones with [z-item-name = "trench-drain-under-flume" or z-item-name = "dumper" or z-item-name = "trench-drain-cleaning" or z-item-name = "trench-drain-drying" or z-item-name = "fan-rollers-catch-pan" or z-item-name = "main-drain-overflow-juncture" or z-item-name = "rot-trolley" or z-item-name = "debris-chute-west" or z-item-name = "debris-chute-east" or z-item-name = "brush-bed-inspection" or z-item-name = "brush-bed-inspection-catch-pan"] [set z-water 2]]
@@ -7022,31 +7027,39 @@ to update-listeria
   ;      [ask self [ die ]]
   ;   ]
 
-  ask listeria-on patches with [(p-listeria = 0) and (c-listeria = 0)]
-    [if (not any? zones-here)
-      [ask self [ die ]]
+  ask listeria-on patches with [(p-listeria = 0) and (c-listeria = 0)] [
+    if (not any? zones-here) [
+      ask self [die]
+    ]
   ]
 
-  ask patches with [(p-listeria = 0) and (c-listeria = 0)]
-  [if (not any? zones-here)
-    [ask listeria-here [ die ]]
+  ask patches with [(p-listeria = 0) and (c-listeria = 0)] [
+    if (not any? zones-here) [
+      ask listeria-here [die]
+    ]
   ]
 
-  ask zones with [ (z-listeria < 1) ]
-  [ let z count listeria-here
+  ask zones with [(z-listeria < 1)] [
+    let z count listeria-here
     ;    if z >= 1
-    if z != 0
-    [ask patch-here
+    if z != 0 [
+      ask patch-here [
       ;    [ if (p-listeria < 1) and (c-listeria < 1)
-      [ if (p-listeria = 0) and (c-listeria = 0)
-        [ask listeria-here [ die ] ]
-  ] ]]
+        if (p-listeria = 0) and (c-listeria = 0) [
+          ask listeria-here [die]
+        ]
+      ]
+    ]
+  ]
 
-  ask zones with [ (z-listeria >= 1) ]
-  [ let z count listeria-here
-    if z > 1
-    [ask listeria-here [ die ]
-      hatch-listeria 1 [ listeria-setup setxy xcor ycor]]
+  ask zones with [(z-listeria >= 1)] [
+    let z count listeria-here
+    if z > 1 [
+      ask listeria-here [die]
+      hatch-listeria 1 [
+        listeria-setup setxy xcor ycor
+      ]
+    ]
   ]
 end
 
@@ -7189,32 +7202,38 @@ to patch-spread-traffic
   ]
 
   ;;include this if including the mezzanine in model
-  ;    ask patches with [m-floor-listeria > 0 and m-traffic > 0]
-  ;  [ let x m-traffic
-  ;    let z 0
-  ;    let M count neighbors with [m-height != 0]
-  ;    let possible-patches ( patch-set neighbors with [m-traffic >= x])
-  ;    let num-patches count possible-patches
-  ;    ifelse x = 3 [set z (p-patch-spread * p-i * traffic-high * (num-patches / M))]
-  ;    [ifelse x = 2 [set z (p-patch-spread * p-i * traffic-low * (num-patches / M))] [set z (p-patch-spread * p-i * traffic-neg * (num-patches / M))]]
-  ;    let N m-floor-listeria ;assume traffic hits entire patch
-  ;    let trans (spread-tc / 100)
-  ;    ;print (word "z:" z)
-  ;    let p 1 - exp (- z)
-  ;    set p p * 100
-  ;    ;print (word "p:" p)
-  ;    if (possible-patches != nobody) and (random-float 100 <  p )
-  ;    [ set m-floor-listeria (m-floor-listeria - (N * trans ))
-  ;      set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
-  ;      ask one-of possible-patches
-  ;       [ let y count (listeria-here)
-  ;         set patch-to-patch (patch-to-patch + 1)
-  ;         set m-floor-listeria (m-floor-listeria + (N * trans ))
-  ;         set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
-  ;         if (([m-floor-listeria] of self) > 0) and (y = 0)
-  ;           [ sprout-listeria 1 [ listeria-setup setxy xcor ycor]]
-  ;       ]]  ]
-
+;  ask patches with [m-floor-listeria > 0 and m-traffic > 0] [
+;    let x m-traffic
+;    let z 0
+;    let M count neighbors with [m-height != 0]
+;    let possible-patches ( patch-set neighbors with [m-traffic >= x])
+;    let num-patches count possible-patches
+;    (ifelse
+;      x = 4 [set z (p-patch-spread * p-i * traffic-veh * (num-patches / M))]
+;      x = 3 [set z (p-patch-spread * p-i * traffic-high * (num-patches / M))]
+;      x = 2 [set z (p-patch-spread * p-i * traffic-low * (num-patches / M))]
+;      [set z (p-patch-spread * p-i * traffic-neg * (num-patches / M))]
+;    )
+;    let N m-floor-listeria ;assume traffic hits entire patch
+;    let trans (spread-tc / 100)
+;    ;print (word "z:" z)
+;    let p 1 - exp (- z)
+;    set p p * 100
+;    ;print (word "p:" p)
+;    if (possible-patches != nobody) and (random-float 100 <  p ) [
+;      set m-floor-listeria (m-floor-listeria - (N * trans ))
+;      set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
+;      ask one-of possible-patches [
+;        let y count (listeria-here)
+;        set patch-to-patch (patch-to-patch + 1)
+;        set m-floor-listeria (m-floor-listeria + (N * trans ))
+;        set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
+;        if (([m-floor-listeria] of self) > 0) and (y = 0) [
+;          sprout-listeria 1 [listeria-setup setxy xcor ycor]
+;        ]
+;      ]
+;    ]
+;  ]
 end
 
 to patch-spread-water
@@ -7244,25 +7263,28 @@ to patch-spread-water
   ]
 
   ;;include this if including the mezzanine in model
-  ; ask patches with [m-floor-listeria > 0 and m-water = 3]
-  ;  [ let N round (m-floor-listeria-concentration) ;assume 1 ml moves
-  ;    let z p-water-spread
-  ;    let trans (spread-tc / 100)
-  ;    let possible-patches ( patch-set neighbors with [m-water = 3])
-  ;    let num-patches count possible-patches
-  ;    set z z * 100
-  ;    if (num-patches != 0) and ((random-float 100 < z) or (N > K))
-  ;    [let listeria-transfer-per-patch ( (trans * N ) / num-patches )
-  ;    set m-floor-listeria (m-floor-listeria - (trans * N))
-  ;    set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
-  ;    ask possible-patches
-  ;       [let y count (listeria-here)
-  ;        set patch-to-patch (patch-to-patch + 1)
-  ;        set m-floor-listeria (m-floor-listeria + listeria-transfer-per-patch)
-  ;        set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
-  ;        if (([m-floor-listeria] of self) > 0) and (y = 0)
-  ;        [sprout-listeria 1 [ listeria-setup setxy xcor ycor]]
-  ;      ]]   ]
+;   ask patches with [m-floor-listeria > 0 and m-water = 3] [
+;    let N round (m-floor-listeria-concentration) ;assume 1 ml moves
+;    let z p-water-spread
+;    let trans (spread-tc / 100)
+;    let possible-patches ( patch-set neighbors with [m-water = 3])
+;    let num-patches count possible-patches
+;    set z z * 100
+;    if (num-patches != 0) and ((random-float 100 < z) or (N > K)) [
+;      let listeria-transfer-per-patch ( (trans * N ) / num-patches )
+;      set m-floor-listeria (m-floor-listeria - (trans * N))
+;      set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
+;      ask possible-patches [
+;        let y count (listeria-here)
+;        set patch-to-patch (patch-to-patch + 1)
+;        set m-floor-listeria (m-floor-listeria + listeria-transfer-per-patch)
+;        set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
+;        if (([m-floor-listeria] of self) > 0) and (y = 0) [
+;          sprout-listeria 1 [listeria-setup setxy xcor ycor]
+;        ]
+;      ]
+;    ]
+;  ]
 end
 
 
@@ -7271,48 +7293,50 @@ to zone-to-patchBelow
     let N (z-listeria-concentration * 5)
     let trans (spread-tc / 100)
     ;;include this section if modeling the mezzanine
-    ;   ifelse z-height > 12 ;;change this number depending on height of mezzanine
-    ;   [let possible-patch one-of neighbors with [m-height != 0]
-    ;   if (possible-patch != nobody) and (random-float 100 < p-food-dropped)
-    ;    [ set z-listeria (z-listeria - (N * trans))
-    ;      set z-listeria-concentration  (z-listeria / [z-area] of self)
-    ;      set zone-to-patch (zone-to-patch + 1)
-    ;      ask possible-patch
-    ;      [ifelse (p-listeria = 0 and c-listeria = 0 and m-floor-listeria = 0 and m-ceiling-listeria = 0)
-    ;         [set m-floor-listeria (N * trans)
-    ;          set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
-    ;          sprout-listeria 1 [ listeria-setup setxy xcor ycor]]
-    ;         [set m-floor-listeria (m-floor-listeria + (trans * N ))
-    ;          set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)]]
-    ;    ]]
-    ;   [;; until here
-    let possible-patch one-of neighbors with [p-water != 0]
-    if (possible-patch != nobody) and (random-float 100 < p-food-dropped) [
-      set z-listeria (z-listeria - (N * trans))
-      set z-listeria-concentration (z-listeria / [z-area] of self)
-      set zone-to-patch (zone-to-patch + 1)
-      ask possible-patch [
+;    ifelse z-height > 12 [;;change this number depending on height of mezzanine
+;      let possible-patch one-of neighbors with [m-height != 0]
+;      if (possible-patch != nobody) and (random-float 100 < p-food-dropped) [
+;        set z-listeria (z-listeria - (N * trans))
+;        set z-listeria-concentration  (z-listeria / [z-area] of self)
+;        set zone-to-patch (zone-to-patch + 1)
+;        ask possible-patch [
+;          ifelse (p-listeria = 0 and c-listeria = 0 and m-floor-listeria = 0 and m-ceiling-listeria = 0) [
+;            set m-floor-listeria (N * trans)
+;            set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)
+;            sprout-listeria 1 [listeria-setup setxy xcor ycor]
+;          ] [
+;            set m-floor-listeria (m-floor-listeria + (trans * N ))
+;            set m-floor-listeria-concentration (m-floor-listeria / [p-area] of self)]
+;        ]
+;      ]
+;    ] [;; until here
+      let possible-patch one-of neighbors with [p-water != 0]
+      if (possible-patch != nobody) and (random-float 100 < p-food-dropped) [
+        set z-listeria (z-listeria - (N * trans))
+        set z-listeria-concentration (z-listeria / [z-area] of self)
+        set zone-to-patch (zone-to-patch + 1)
+        ask possible-patch [
       ;      [ifelse (p-listeria = 0 and c-listeria = 0 and m-floor-listeria = 0 and m-ceiling-listeria = 0)
-        ifelse (p-listeria = 0 and c-listeria = 0) [
-          set p-listeria (N * trans)
-          set p-listeria-concentration (p-listeria / [p-area] of self)
-          sprout-listeria 1 [
-            listeria-setup setxy xcor ycor
+          ifelse (p-listeria = 0 and c-listeria = 0) [
+            set p-listeria (N * trans)
+            set p-listeria-concentration (p-listeria / [p-area] of self)
+            sprout-listeria 1 [
+              listeria-setup setxy xcor ycor
+            ]
+          ] [
+            set p-listeria (p-listeria + (trans * N ))
+            set p-listeria-concentration (p-listeria / [p-area] of self)
           ]
-        ] [
-          set p-listeria (p-listeria + (trans * N ))
-          set p-listeria-concentration (p-listeria / [p-area] of self)
         ]
       ]
-    ]
-    ;   ] ;; and remove this bracket too if not using mezzanine
+;    ] ;; and remove this bracket too if not using mezzanine
   ]
 end
 
 to condensation
   ;ask patches with [(c-water = 3 or m-water = 3) and (pxcor > 16 and pxcor < 89 and pycor < 61)] ;;change coordinates to match the ceiling area of the production room
-  ask patches with [(c-water = 3)] ;;change coordinates to match the ceiling area of the production room
-  [let prob p-condensation
+  ask patches with [(c-water = 3)] [;;change coordinates to match the ceiling area of the production room
+    let prob p-condensation
     ;    let possible-ceiling count patches with [p-water != 0 and p-water != 35 and p-water != 5 and pxcor > 16 and pxcor < 89 and pycor < 61]
     let possible-ceiling count patches with [p-water != 0 and p-water != 35 and p-water != 5 and p-water != 6]
     ;    let possible-mezzanine count patches with [m-height != 0]
@@ -7337,25 +7361,31 @@ to condensation
     ;       if p-water < 2 [set p-water 2 ] ; if no zone below, condensation falls to floor
     ;      ]]]
 
-    if random-float 100 < (prob * 1 / possible-ceiling)   ;probability that condensation falls from specific patch
-      [set condensation-drip (condensation-drip + 1)
-        let N c-listeria-concentration * 2 ; 2ml droplet
-        set c-listeria (c-listeria - N)
-        set c-listeria-concentration (c-listeria / [p-area] of self)
-        ifelse (any? zones-here) ; if there is a zone below, condensation falls there
-        [ask zones-here with-max [z-height]
-          [ifelse (z-listeria = 0)
-            [ set z-listeria (N)
-              hatch-listeria 1 [listeria-setup setxy xcor ycor]
-              set z-water 2
-              if not z-cleanable? [set z-niches-established z-niches-established + 1]]
-            [set z-listeria (z-listeria + N)
-              set z-listeria-concentration (z-listeria / [z-area] of self)
-              set z-water 2]]]
-        [set p-listeria (p-listeria + N)
-          set p-listeria-concentration (p-listeria / [p-area] of self)
-          if p-water < 2 [set p-water 2 ] ; if no zone below, condensation falls to floor
-    ]]
+    if random-float 100 < (prob * 1 / possible-ceiling) [  ;probability that condensation falls from specific patch
+      set condensation-drip (condensation-drip + 1)
+      let N c-listeria-concentration * 2 ; 2ml droplet
+      set c-listeria (c-listeria - N)
+      set c-listeria-concentration (c-listeria / [p-area] of self)
+      ifelse (any? zones-here) [; if there is a zone below, condensation falls there
+        ask zones-here with-max [z-height] [
+          ifelse (z-listeria = 0) [
+            set z-listeria (N)
+            hatch-listeria 1 [listeria-setup setxy xcor ycor]
+            set z-water 2
+            if not z-cleanable? [
+              set z-niches-established z-niches-established + 1]
+          ] [
+            set z-listeria (z-listeria + N)
+            set z-listeria-concentration (z-listeria / [z-area] of self)
+            set z-water 2
+          ]
+        ]
+      ] [
+        set p-listeria (p-listeria + N)
+        set p-listeria-concentration (p-listeria / [p-area] of self)
+        if p-water < 2 [set p-water 2 ] ; if no zone below, condensation falls to floor
+      ]
+    ]
   ]
 end
 
@@ -7406,27 +7436,43 @@ to zone4-introduction
       let n count sites
       let q count spots
 
-      ifelse random-float 100 < 50 ;assume equal chance of introduction going to floor or equipment
+      ifelse random-float 100 < 50 [;assume equal chance of introduction going to floor or equipment
 
-      [if (n != 0) [
-        ask one-of sites [
-          let x count listeria-here
-          set introduction-zone4 (introduction-zone4 + 1)
-          ask self [set z-listeria (z-listeria + zone4-load) set z-listeria-concentration (z-listeria / [z-area] of self) set z-zone4 z-zone4 + 1]
-          if (([z-listeria] of self) > 0) and (x = 0)
-            [hatch-listeria 1 [ listeria-setup setxy xcor ycor]
-              if ([not z-cleanable?] of self) [set z-niches-established z-niches-established + 1]]
-      ]]]
-
-      [if (q != 0) [
-        ask one-of spots [
-          let y count listeria-here
-          set introduction-zone4 (introduction-zone4 + 1)
-          ask self [set p-listeria (p-listeria + zone4-load) set p-listeria-concentration (p-listeria / [p-area] of self) set p-zone4 p-zone4 + 1]
-          if (([p-listeria] of self) > 0) and (y = 0)
-              [sprout-listeria 1 [ listeria-setup setxy xcor ycor]]
-      ]]]
-  ]]
+        if (n != 0) [
+          ask one-of sites [
+            let x count listeria-here
+            set introduction-zone4 (introduction-zone4 + 1)
+            ask self [
+              set z-listeria (z-listeria + zone4-load)
+              set z-listeria-concentration (z-listeria / [z-area] of self)
+              set z-zone4 z-zone4 + 1
+            ]
+            if (([z-listeria] of self) > 0) and (x = 0) [
+              hatch-listeria 1 [ listeria-setup setxy xcor ycor]
+              if ([not z-cleanable?] of self) [
+                set z-niches-established z-niches-established + 1
+              ]
+            ]
+          ]
+        ]
+      ] [
+        if (q != 0) [
+          ask one-of spots [
+            let y count listeria-here
+            set introduction-zone4 (introduction-zone4 + 1)
+            ask self [
+              set p-listeria (p-listeria + zone4-load)
+              set p-listeria-concentration (p-listeria / [p-area] of self)
+              set p-zone4 p-zone4 + 1
+            ]
+            if (([p-listeria] of self) > 0) and (y = 0) [
+                sprout-listeria 1 [listeria-setup setxy xcor ycor]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
 end
 
 to random-noise
@@ -7479,23 +7525,50 @@ to random-noise
   ;          if ([not z-cleanable?] of self) [set z-niches-established z-niches-established + 1]]]]]
   let y random 100 ;Sets up probability of random introduction to floor (75%), agents (20%) and ceiling (5%)
   (ifelse
-    y < 75 [set random-floor random-floor + 1
+    y < 75 [
+      set random-floor random-floor + 1
       ask one-of patches with [p-water != 0] [
         let z count listeria-here
-        ask self [set p-listeria (p-listeria + random-load) set p-listeria-concentration (p-listeria / [p-area] of self) set p-random p-random + 1]]]
-    (y >= 75 and y < 95) [ask one-of zones [
-      set random-agent random-agent + 1
-      let x count listeria-here
-      ask self [set z-listeria (z-listeria + random-load) set z-listeria-concentration (z-listeria / [z-area] of self) set z-random z-random + 1]
-      if (([z-listeria] of self) > 0) and (x = 0) [hatch-listeria 1 [listeria-setup setxy xcor ycor]
-        if ([not z-cleanable?] of self) [set z-niches-established z-niches-established + 1]]]
+        ask self [
+          set p-listeria (p-listeria + random-load)
+          set p-listeria-concentration (p-listeria / [p-area] of self)
+          set p-random p-random + 1
+        ]
+      ]
     ]
-    [set random-ceiling random-ceiling + 1 ask one-of patches with [p-water != 0] [let z count listeria-here ask self [set c-listeria (c-listeria + random-load) set c-listeria-concentration (c-listeria / [p-area] of self) set p-random p-random + 1]
-      if (([c-listeria] of self) > 0) and (z = 0) [sprout-listeria 1 [listeria-setup setxy pxcor pycor]]]]
+    (y >= 75 and y < 95) [
+      ask one-of zones [
+        set random-agent random-agent + 1
+        let x count listeria-here
+        ask self [
+          set z-listeria (z-listeria + random-load)
+          set z-listeria-concentration (z-listeria / [z-area] of self)
+          set z-random z-random + 1
+        ]
+        if (([z-listeria] of self) > 0) and (x = 0) [hatch-listeria 1 [listeria-setup setxy xcor ycor]
+          if ([not z-cleanable?] of self) [set z-niches-established z-niches-established + 1]]]
+    ] [
+      set random-ceiling random-ceiling + 1
+      ask one-of patches with [p-water != 0] [
+        let z count listeria-here
+        ask self [
+          set c-listeria (c-listeria + random-load)
+          set c-listeria-concentration (c-listeria / [p-area] of self)
+          set p-random p-random + 1
+        ]
+      if (([c-listeria] of self) > 0) and (z = 0) [
+          sprout-listeria 1 [listeria-setup setxy pxcor pycor]
+        ]
+      ]
+    ]
   )
-  if p-random-noise != 0 [set randomEvent ticks + (item 0 random-event-list)
+  if p-random-noise != 0 [
+    set randomEvent ticks + (item 0 random-event-list)
     set random-event-list but-first random-event-list
-    if random-event-list = [] [setup-randomEvents]]
+    if random-event-list = [] [
+      setup-randomEvents
+    ]
+  ]
 end
 
 to clean
@@ -7609,7 +7682,8 @@ to sample ; will need modification depending on historical sampling practice and
     if day = 4 [set w-z-samples w-z-samples + 1]
     if day = 5 [set r-z-samples r-z-samples + 1]
     if day = 6 [set f-z-samples f-z-samples + 1]
-    set z-sampled? true set color lime
+    set z-sampled? true
+    set color lime
     let result 0
     (ifelse
       ;if cleaning
@@ -7627,91 +7701,99 @@ to sample ; will need modification depending on historical sampling practice and
       ;else
       [set other-total-samples other-total-samples + 1]
     )
-    if (z-listeria-concentration > 0 and z-listeria-concentration <= 10)
-        [ ifelse random-float 100 < 10 ; when concentration between 0-10 CFU/cm^2, 10% FN rate
-          [set result -1][set result 1]]
-    if (z-listeria-concentration > 10 and z-listeria-concentration <= 100)
-        [ ifelse random-float 100 < 1 ; when concentration between 10-100 CFU/cm^2, 1% FN rate
-          [set result -1][set result 1]]
-    if (z-listeria-concentration > 100)
-            [set result 1]
-    if result = 1
-          [set z-sample-prev z-sample-prev + 1
-            if z-category = 1 [set z1-prev z1-prev + 1]
-            if z-category = 2 [set z2-prev z2-prev + 1]
-            if z-category = 3 [set z3-prev z3-prev + 1]
-            if production-time = 0 [set z-sample-beg-prev z-sample-beg-prev + 1]
-            ;            if production-time = 3 [set z-sample-mid-prev z-sample-mid-prev + 1]
-            if production-time > 2 and production-time < 6 [set z-sample-mid-prev z-sample-mid-prev + 1]
-            if production-time > 5 [set z-sample-post-prev z-sample-post-prev + 1]
-            if day = 2 [set m-z-prev m-z-prev + 1]
-            if day = 3 [set t-z-prev t-z-prev + 1]
-            if day = 4 [set w-z-prev w-z-prev + 1]
-            if day = 5 [set r-z-prev r-z-prev + 1]
-            if day = 6 [set f-z-prev f-z-prev + 1]
-            (ifelse
-              ;if cleaning
-              z-equipment = "cleaning" [
-                set cleaning-total-prev cleaning-total-prev + 1
-                set cleaning-conc-list lput z-listeria-concentration cleaning-conc-list
-                set cleaning-niche-time-list lput z-time-to-niche cleaning-niche-time-list
-                set cleaning-niche-length-list lput z-niche-length cleaning-niche-length-list
-                set cleaning-niches-established-list lput z-niches-established cleaning-niches-established-list
-              ]
-              ;if drying
-              ;              z-equipment = "drying" [
-              ;                set drying-total-prev drying-total-prev + 1
-              ;                set drying-conc-list lput z-listeria-concentration drying-conc-list
-              ;                set drying-niche-time-list lput z-time-to-niche drying-niche-time-list
-              ;                set drying-niche-length-list lput z-niche-length drying-niche-length-list
-              ;                set drying-niches-established-list lput z-niches-established drying-niches-established-list
-              ;              ]
-              ;if loading
-              z-equipment = "loading" [
-                set loading-total-prev loading-total-prev + 1
-                set loading-conc-list lput z-listeria-concentration loading-conc-list
-                set loading-niche-time-list lput z-time-to-niche loading-niche-time-list
-                set loading-niche-length-list lput z-niche-length loading-niche-length-list
-                set loading-niches-established-list lput z-niches-established loading-niches-established-list
-              ]
-              ;if reject
-              z-equipment = "reject" [
-                set reject-total-prev reject-total-prev + 1
-                set reject-conc-list lput z-listeria-concentration reject-conc-list
-                set reject-niche-time-list lput z-time-to-niche reject-niche-time-list
-                set reject-niche-length-list lput z-niche-length reject-niche-length-list
-                set reject-niches-established-list lput z-niches-established reject-niches-established-list
-              ]
-              ;if sorting
-              z-equipment = "sorting" [
-                set sorting-total-prev sorting-total-prev + 1
-                set sorting-conc-list lput z-listeria-concentration sorting-conc-list
-                set sorting-niche-time-list lput z-time-to-niche sorting-niche-time-list
-                set sorting-niche-length-list lput z-niche-length sorting-niche-length-list
-                set sorting-niches-established-list lput z-niches-established sorting-niches-established-list
-              ]
-              ;if tray-packing
-              z-equipment = "tray-packing" [
-                set tray-packing-total-prev tray-packing-total-prev + 1
-                set tray-packing-conc-list lput z-listeria-concentration tray-packing-conc-list
-                set tray-packing-niche-time-list lput z-time-to-niche tray-packing-niche-time-list
-                set tray-packing-niche-length-list lput z-niche-length tray-packing-niche-length-list
-                set tray-packing-niches-established-list lput z-niches-established tray-packing-niches-established-list
-              ]
-              ;else
-              [
-                set other-total-prev other-total-prev + 1
-                set other-conc-list lput z-listeria-concentration other-conc-list
-                set other-niche-time-list lput z-time-to-niche other-niche-time-list
-                set other-niche-length-list lput z-niche-length other-niche-length-list
-                set other-niches-established-list lput z-niches-established other-niches-established-list
-              ]
-            )
+    if (z-listeria-concentration > 0 and z-listeria-concentration <= 10) [
+      ifelse random-float 100 < 10 [; when concentration between 0-10 CFU/cm^2, 10% FN rate
+        set result -1
+      ][
+        set result 1
+      ]
+    ]
+    if (z-listeria-concentration > 10 and z-listeria-concentration <= 100) [
+      ifelse random-float 100 < 1 [; when concentration between 10-100 CFU/cm^2, 1% FN rate
+        set result -1
+      ] [
+        set result 1
+      ]
+    ]
+    if (z-listeria-concentration > 100) [
+      set result 1
+    ]
+    if result = 1 [
+      set z-sample-prev z-sample-prev + 1
+      if z-category = 1 [set z1-prev z1-prev + 1]
+      if z-category = 2 [set z2-prev z2-prev + 1]
+      if z-category = 3 [set z3-prev z3-prev + 1]
+      if production-time = 0 [set z-sample-beg-prev z-sample-beg-prev + 1]
+      ;            if production-time = 3 [set z-sample-mid-prev z-sample-mid-prev + 1]
+      if production-time > 2 and production-time < 6 [set z-sample-mid-prev z-sample-mid-prev + 1]
+      if production-time > 5 [set z-sample-post-prev z-sample-post-prev + 1]
+      if day = 2 [set m-z-prev m-z-prev + 1]
+      if day = 3 [set t-z-prev t-z-prev + 1]
+      if day = 4 [set w-z-prev w-z-prev + 1]
+      if day = 5 [set r-z-prev r-z-prev + 1]
+      if day = 6 [set f-z-prev f-z-prev + 1]
+      (ifelse
+        ;if cleaning
+        z-equipment = "cleaning" [
+          set cleaning-total-prev cleaning-total-prev + 1
+          set cleaning-conc-list lput z-listeria-concentration cleaning-conc-list
+          set cleaning-niche-time-list lput z-time-to-niche cleaning-niche-time-list
+          set cleaning-niche-length-list lput z-niche-length cleaning-niche-length-list
+          set cleaning-niches-established-list lput z-niches-established cleaning-niches-established-list
+        ]
+        ;if drying
+        ;              z-equipment = "drying" [
+        ;                set drying-total-prev drying-total-prev + 1
+        ;                set drying-conc-list lput z-listeria-concentration drying-conc-list
+        ;                set drying-niche-time-list lput z-time-to-niche drying-niche-time-list
+        ;                set drying-niche-length-list lput z-niche-length drying-niche-length-list
+        ;                set drying-niches-established-list lput z-niches-established drying-niches-established-list
+        ;              ]
+        ;if loading
+        z-equipment = "loading" [
+          set loading-total-prev loading-total-prev + 1
+          set loading-conc-list lput z-listeria-concentration loading-conc-list
+          set loading-niche-time-list lput z-time-to-niche loading-niche-time-list
+          set loading-niche-length-list lput z-niche-length loading-niche-length-list
+          set loading-niches-established-list lput z-niches-established loading-niches-established-list
+        ]
+        ;if reject
+        z-equipment = "reject" [
+          set reject-total-prev reject-total-prev + 1
+          set reject-conc-list lput z-listeria-concentration reject-conc-list
+          set reject-niche-time-list lput z-time-to-niche reject-niche-time-list
+          set reject-niche-length-list lput z-niche-length reject-niche-length-list
+          set reject-niches-established-list lput z-niches-established reject-niches-established-list
+        ]
+        ;if sorting
+        z-equipment = "sorting" [
+          set sorting-total-prev sorting-total-prev + 1
+          set sorting-conc-list lput z-listeria-concentration sorting-conc-list
+          set sorting-niche-time-list lput z-time-to-niche sorting-niche-time-list
+          set sorting-niche-length-list lput z-niche-length sorting-niche-length-list
+          set sorting-niches-established-list lput z-niches-established sorting-niches-established-list
+        ]
+        ;if tray-packing
+        z-equipment = "tray-packing" [
+          set tray-packing-total-prev tray-packing-total-prev + 1
+          set tray-packing-conc-list lput z-listeria-concentration tray-packing-conc-list
+          set tray-packing-niche-time-list lput z-time-to-niche tray-packing-niche-time-list
+          set tray-packing-niche-length-list lput z-niche-length tray-packing-niche-length-list
+          set tray-packing-niches-established-list lput z-niches-established tray-packing-niches-established-list
+        ]
+        ;else
+        [
+          set other-total-prev other-total-prev + 1
+          set other-conc-list lput z-listeria-concentration other-conc-list
+          set other-niche-time-list lput z-time-to-niche other-niche-time-list
+          set other-niche-length-list lput z-niche-length other-niche-length-list
+          set other-niches-established-list lput z-niches-established other-niches-established-list
+        ]
+      )
     ]
     set possible-z-sites possible-z-sites with [self != myself]
     ;ask possible-z-sites [print self]
   ]
-
 end
 
 ;these are options from the chooser on interface for sampling-sites - still experimenting here but may not be relevant to your experiments for corrective actions
@@ -8869,7 +8951,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.2.2
+NetLogo 6.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -59566,6 +59648,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Single_Dirty_Agent" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -61728,6 +61813,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_0-50-51" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -63888,6 +63976,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Quat_Powder" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -66046,6 +66137,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Crate_Prev_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -68207,6 +68301,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Z4_Load_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -70368,6 +70465,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_P_Z4_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -72529,6 +72629,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Random_Load_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -74690,6 +74793,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_P_Random_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -76850,6 +76956,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Connections_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -79008,6 +79117,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Combined_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -81168,6 +81280,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Risk-Based_Interventions" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -83327,8 +83442,11 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
-  <experiment name="100_Runs_8_Pre_Contamination" repetitions="1" runMetricsEveryStep="false">
+  <experiment name="100_Runs_8_Weeks_Pre_Contamination" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>spread-tc</metric>
@@ -85490,8 +85608,11 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
-  <experiment name="100_Runs_8_Pre_Contamination_Stand" repetitions="1" runMetricsEveryStep="false">
+  <experiment name="100_Runs_8_Weeks_Pre_Contamination_Stand" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>spread-tc</metric>
@@ -87648,6 +87769,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Variable_Prob_Clean" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -89806,6 +89930,9 @@ NetLogo 6.2.2
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="1000_Runs_8_Weeks_Variable_Prob_Clean" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>

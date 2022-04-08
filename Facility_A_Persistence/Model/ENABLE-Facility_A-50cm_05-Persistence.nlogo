@@ -1,5 +1,5 @@
 ;; Created (2019) by Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
-;; Adapted (2019) by Cecil Barnett-Neefs, Genevieve Sullivan, Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
+;; Adapted (2022) by Cecil Barnett-Neefs, Genevieve Sullivan, Claire Zoellner, Renata Ivanek, Martin Wiedmann at Cornell University
 ;; Funding provided by American Frozen Food Institute (AFFI) and Center for Produce Safety (CPS)
 
 ;; An agent-based model that simulates Listeria spp. behavior in a food production facility and control strategies of cleaning and environmental sampling
@@ -9788,7 +9788,7 @@ local-seed
 local-seed
 0
 100
-1.0
+98.0
 1
 1
 NIL
@@ -9803,7 +9803,7 @@ scenario
 scenario
 0
 55
-0.0
+33.0
 1
 1
 NIL
@@ -46991,6 +46991,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Single_Dirty_Agent" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -60224,6 +60227,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Sanitation_Reschedule" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -62431,6 +62437,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Connections_Intervention" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -64635,6 +64644,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Flume_and_Deep_Clean" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -69047,6 +69059,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Z4_Load_Intervention" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -71254,6 +71269,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_P_Random_Intervention" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -73460,6 +73478,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Random_Load_Intervention" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -80080,6 +80101,9 @@ NetLogo 6.2.0
       <value value="1000000"/>
     </enumeratedValueSet>
     <steppedValueSet variable="local-seed" first="1" step="1" last="100"/>
+    <enumeratedValueSet variable="hourly-data">
+      <value value="true"/>
+    </enumeratedValueSet>
   </experiment>
   <experiment name="100_Runs_8_Weeks_Variable_Prob_Clean" repetitions="1" runMetricsEveryStep="false">
     <setup>setup</setup>
